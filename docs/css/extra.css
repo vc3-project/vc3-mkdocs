@@ -1,0 +1,76 @@
+body {
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+  padding-top: 100px;
+}
+
+a {
+  transition: 0.5s;
+}
+.navbar a:hover {
+  color: #ffc500;
+}
+
+.container .bs-sidebar {
+  position: static;
+}
+
+.navbar {
+  height: 90px;
+  padding: 20px 0;
+  background-image: linear-gradient(#24292e,#24292e 100%,#24292e);
+  background-color: #24292e;
+  border-bottom: 1px solid #ffffff;
+}
+.container .navbar-collapse {
+  margin-right: 0;
+  margin-left: 0;
+  border-bottom: 1px solid #ffffff;
+  background-color: #24292e;
+  border-color: #24292e;
+}
+
+.navbar-header a {
+  font-weight: 700;
+  font-family: "Raleway", sans-serif;
+}
+
+.navbar-collapse .navbar-nav>li {
+  font-size: 14px;
+}
+
+/* @media (min-width: 768px) .navbar>.container .navbar-brand {
+  margin-left: -15px;
+} */
+
+.navbar-default .navbar-brand {
+  background: url(https://image.ibb.co/e59s3v/logosmall.png) center / contain no-repeat;
+  width: 200px;
+  margin-right: -60px;
+  float: left;
+  height: 50px;
+  padding: 15px 15px;
+  font-size: 24px;
+  line-height: 20px;
+  vertical-align: middle;
+  color: #ffc500;
+}
+
+.navbar-collapse .navbar-nav>li:hover, .navbar-collapse .navbar-nav>li:focus{
+  background-color: #24292e;
+}
+.navbar-collapse .navbar-nav>li>.dropdown-toggle:hover, .navbar-collapse .navbar-nav>li>.dropdown-toggle:focus {
+  background-color: #24292e;
+  color: #ffc500;
+}
+.navbar-collapse .navbar-nav>li>a:hover, .navbar-collapse .navbar-nav>li>a:focus {
+  background-color: #24292e;
+  color: #ffc500;
+}
+
+.navbar-collapse .navbar-nav>.active>a, .navbar-collapse .navbar-nav>.active>a:hover, .navbar-collapse .navbar-nav>.active>a:focus {
+  color: #ffc500;
+  background-color: #24292e;
+  background: #24292e;
+  background-image: linear-gradient(#24292e,#24292e 100%,#24292e);
+}
