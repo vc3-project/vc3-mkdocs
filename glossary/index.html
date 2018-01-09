@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        <link rel="canonical" href="https://www.docs.virtualclusters.org/glossary/">
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Glossary - VC3</title>
+        <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../css/font-awesome-4.5.0.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="../css/highlight.css">
+        <link href="../css/extra.css" rel="stylesheet">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../js/jquery-1.10.2.min.js"></script>
+        <script src="../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../js/highlight.pack.js"></script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="..">VC3</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                    <li >
+                        <a href="..">Home</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">User Guide <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="../userguide/vc3-user-guide/">VC3 User Guide</a>
+</li>
+                            
+<li >
+    <a href="../userguide/vc3-dev-guide/">VC3 Developers Guide</a>
+</li>
+                        </ul>
+                    </li>
+                    <li class="active">
+                        <a href="./">Glossary</a>
+                    </li>
+                    <li >
+                        <a href="../mkcommands/">MK Docs Cheatsheet</a>
+                    </li>
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                        <i class="fa fa-search"></i> Search
+                    </a>
+                </li>
+                    <li >
+                        <a rel="next" href="../userguide/vc3-dev-guide/">
+                            <i class="fa fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../mkcommands/">
+                            Next <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/vc3-project/vc3-mkdocs/edit/master/docs/glossary.md"><i class="fa fa-github"></i> Edit on GitHub</a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#glossary-of-terms-used-in-vc3-documentation">Glossary of Terms Used in VC3 Documentation</a></li>
+            <li><a href="#internal">Internal</a></li>
+            <li><a href="#external">External</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="glossary-of-terms-used-in-vc3-documentation">Glossary of Terms Used in VC3 Documentation</h1>
+<h2 id="internal"><strong>Internal</strong></h2>
+<h3 id="cluster-states">cluster states</h3>
+<p>List of each possible state of a cluster throughout its lifecycle:</p>
+<ul>
+<li>NEW - Request was just created.</li>
+<li>VALIDATED - Request has been validated for basic correctness.</li>
+<li>PENDING - Request is valid and is waiting to be instantiated.</li>
+<li>GROWING - Cluster is in the process of being instantiated but is not yet usable.</li>
+<li>RUNNING - Cluster is ready to use.</li>
+<li>SHRINKING - Cluster resources are being removed.</li>
+<li>TERMINATING - Cluster is about to be destroyed.</li>
+<li>TERMINATED - Cluster no longer exists.</li>
+</ul>
+<h3 id="credible">credible</h3>
+<ul>
+<li>Credible is a 3rd-party utility for programmatically generating, storing, and retrieving security tokens.</li>
+</ul>
+<h3 id="dynamic-infrastructure">dynamic infrastructure</h3>
+<ul>
+<li>Services that are instantiated upon a virtual cluster request, such as the factory.</li>
+</ul>
+<h3 id="factory">factory</h3>
+<ul>
+<li>The scheduler and resource manager for middleware.</li>
+</ul>
+<h3 id="formatter">formatter</h3>
+<ul>
+<li>A plugin that augments the output of |Flake8| when passed to flake8 --format.</li>
+</ul>
+<h3 id="info-service">info service</h3>
+<ul>
+<li>
+<p>Long-running daemon that interacts with the information database on behalf of other services.</p>
+</li>
+<li>
+<p>The VC3 info service serves as both a persistence mechanism for the overall service, and a message bus between components. Information is stored and retrieved in the form of JSON-formatted documents, which thus form a single tree of information entities/nodes. The service optionally allows access security by enforcing ACLs at each node level.</p>
+</li>
+</ul>
+<h3 id="pin">PIN</h3>
+<ul>
+<li>Personal Identification Number. One-time password for configuring a VC3 resource via vc3-resource-tool</li>
+</ul>
+<h3 id="plugin-manager">plugin-manager</h3>
+<ul>
+<li>The plugin manager is a 3rd-party small utility for quickly constructing plugin objects from configuration input.</li>
+</ul>
+<h3 id="request-id">request ID</h3>
+<ul>
+<li>Unique identifier for a virtual cluster request.</li>
+</ul>
+<h3 id="static-infrastructure">static infrastructure</h3>
+<ul>
+<li>A set of long-running services, such as the Info Service, Master, etc.</li>
+</ul>
+<h3 id="vc3-application">vc3-application</h3>
+<ul>
+<li>One of the supported middleware applications to be deployed as an overlay defining a virtual cluster.</li>
+</ul>
+<h3 id="vc3-builder">vc3-builder</h3>
+<ul>
+<li>Pilot-like executable that prepares an environment for middleware and user applications. The vc3-builder is a pilot-like utility, submitted to resource targets, which programmatically satisfies all requested dependencies before handing off control to the middleware layer. Its special feature is the ability to satisfy dependencies in different ways on different targets, depending on what it finds, e.g. it can tell if a dep is already satisfied, can download a pre-built library, or dynamically compile a dep if needed. Several builders can simultaneously satisfy dependencies in parallel on a resource (provided a shared filesystem).</li>
+</ul>
+<h3 id="vc3-client">vc3-client</h3>
+<ul>
+<li>Package containing the VC3-aware library for creating, listing, updating, and deleting entities within the infoservice. It also contains a command line interface to the library.</li>
+</ul>
+<h3 id="vc3-core">vc3-core</h3>
+<ul>
+<li>The VC3 component that coordinates activity within the dynamic infrastructure. One vc3-core exists per virtual cluster Request during its lifecycle. A vc3-core will typically start a vc3-factory, along with any central components the cluster will need (e.g. an HTCondor collector/negotiator/schedd, a WorkQueue catalog, or a Squid server).</li>
+</ul>
+<h3 id="vc3-master">vc3-master</h3>
+<ul>
+<li>Package containing the long-running daemon, running on the static infrastructure, that manages the lifecycle of all virtual cluster Requests. The vc3-master is a long-running daemon, running on the static infrastructure, that manages the lifecycle of all virtual cluster Requests. It polls the infoservice for new Requests, and spawns vc3-core instances on the dynamic infrastructure to service them. It also handles the generation and processing of all derived entities within the infoservice tree.</li>
+</ul>
+<h3 id="vc3-release">vc3-release</h3>
+<ul>
+<li>This is a developer package that contains various setup and test utilities, and artifacts needed to create and use a YUM RPM repository.</li>
+</ul>
+<h3 id="vc3-resource-tool">vc3-resource-tool</h3>
+<ul>
+<li>The vc3-resource-tool is a utility to be run by end users on resource targets in order to pair and enable them for usage by the VC3 system.</li>
+</ul>
+<h2 id="external"><strong>External</strong></h2>
+<h3 id="allocation">Allocation</h3>
+<ul>
+<li>An Allocation refers to an User and a Resource Each Allocation must be owned by an User. Allocations are divisible/fractionable, and can be given to Projects. Allocations may not be oversubscribed. But unbounded Allocations may be parents of multiple unbounded SubAllocations. Bounded Allocations cannot spawn unbounded SubAllocations. If a Resource grants hard allocation and allows backfill mode, those are two distinct Allocations (one hard and one unbounded)</li>
+</ul>
+<h3 id="authentication">Authentication</h3>
+<ul>
+<li>The current mechanism for users to sign-up and create accounts into the VC3 project is by authenticating themselves with their GlobusID account.</li>
+</ul>
+<h3 id="mfa">MFA</h3>
+<ul>
+<li>multi-factor authentication</li>
+</ul>
+<h3 id="project">Project</h3>
+<ul>
+<li>a collection of “Allocations”. It has at least 1 “user owner”, and 0 or more non-owner members. The owner is also a member.</li>
+</ul>
+<h3 id="request">Request</h3>
+<ul>
+<li>Entity that encapsulates all information that defines a particular virtual cluster. Creating a new Request triggers creation of the cluster.</li>
+</ul>
+<h3 id="request-templates">Request templates</h3>
+<ul>
+<li>a list of pre-existing forms to be used as base for new cluster requests creation.</li>
+</ul>
+<h3 id="resource">Resource</h3>
+<ul>
+<li>Any target on which a vc3-builder will run to provide computing power to a virtual cluster.</li>
+</ul>
+<h3 id="resource-profiles">Resource profiles</h3>
+<ul>
+<li>a list of pre-existing forms to be used as base for new resource definition.</li>
+</ul>
+<h3 id="service-unit">Service unit</h3>
+<ul>
+<li>
+<p>Service units are essentially just walltime hours, with minimum charges based on minimum cores or minimum nodes per job. Much like HEPSPEC, the SUs can be normalized/converted based on LINPACK benchmarks. Doc from XSEDE: https://portal.xsede.org/knowledge-base/-/kb/document/bazo</p>
+</li>
+<li>
+<p>For storage, possibly with multiple allocations per user, examples are scratch disk vs long term storage.</p>
+</li>
+<li>
+<p>Exotic devices like GPUs may or may not be accounted for, depending on the resource.</p>
+</li>
+</ul>
+<h3 id="sub-allocation">Sub-Allocation</h3>
+<ul>
+<li>A SubAllocation can be defined in terms of fraction or units (cpuhours?, $dollars, HEPSPEC) or be unbounded. SubAllocations are children of an Allocation.</li>
+</ul>
+<h3 id="user">User</h3>
+<ul>
+<li>Every User has 0 or more Allocations. Users are owners or members of one or more projects. A User in a project can make Request(s) utilizing project member’s Allocations</li>
+</ul></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>var base_url = '..';</script>
+        <script src="../js/base.js"></script>
+        <script src="../search/require.js"></script>
+        <script src="../search/search.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>&larr;</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>&rarr;</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    </body>
+</html>
