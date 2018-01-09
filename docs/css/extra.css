@@ -43,6 +43,10 @@ a {
   margin-left: -15px;
 } */
 
+.navbar-default .navbar-brand:hover, navbar-default .navbar-brand:focus {
+  color: #ffc500;
+}
+
 .navbar-default .navbar-brand {
   background: url(https://image.ibb.co/e59s3v/logosmall.png) center / contain no-repeat;
   width: 200px;

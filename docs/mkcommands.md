@@ -11,7 +11,7 @@ A simple pages configuration looks like this:
 ```no-highlight
 pages:
 - 'index.md'
-- 'user-guide-1.md'
+- 'vc3-user-guide.md'
 - 'glossary.md'
 ```
 
@@ -22,7 +22,7 @@ provide custom names for these pages, they may be added before their filenames:
 ```no-highlight
 pages:
 - Home: index.md
-- User Guide: user-guide-1.md
+- User Guide: vc3-user-guide.md
 ```
 
 
