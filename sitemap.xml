@@ -3,7 +3,7 @@
 
     
     <url>
-     <loc>https://www.docs.virtualclusters.org//</loc>
+     <loc>https://vc3-project.github.io/vc3-mkdocs//</loc>
      <lastmod>2018-02-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -12,13 +12,13 @@
     
         
     <url>
-     <loc>https://www.docs.virtualclusters.org//userguide/vc3-user-guide/</loc>
+     <loc>https://vc3-project.github.io/vc3-mkdocs//userguide/vc3-user-guide/</loc>
      <lastmod>2018-02-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://www.docs.virtualclusters.org//userguide/vc3-dev-guide/</loc>
+     <loc>https://vc3-project.github.io/vc3-mkdocs//userguide/vc3-dev-guide/</loc>
      <lastmod>2018-02-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -27,7 +27,7 @@
 
     
     <url>
-     <loc>https://www.docs.virtualclusters.org//glossary/</loc>
+     <loc>https://vc3-project.github.io/vc3-mkdocs//glossary/</loc>
      <lastmod>2018-02-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
