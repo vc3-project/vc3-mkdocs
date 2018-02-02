@@ -289,51 +289,6 @@
             "location": "/glossary/#user",
             "text": "Every User has 0 or more Allocations. Users are owners or members of one or more projects. A User in a project can make Request(s) utilizing project member\u2019s Allocations",
             "title": "User"
-        },
-        {
-            "location": "/mkcommands/",
-            "text": "MK Docs Cheatsheet\n\n\nConfigure Pages and Navigation\n\n\nThe page configuration may be added/edited in the \nmkdocs.yml\n file, which will\nthen appear on the nav-bar.\n\n\nA simple pages configuration looks like this:\n\n\npages:\n- 'index.md'\n- 'vc3-user-guide.md'\n- 'glossary.md'\n\n\n\n\nThis example will build two pages at the top level nav-bar, and will have\ntheir titles automatically inferred from their respective filenames. In order to\nprovide custom names for these pages, they may be added before their filenames:\n\n\npages:\n- Home: index.md\n- User Guide: vc3-user-guide.md\n\n\n\n\nMultilevel Documentation\n\n\nSubsections can be created by listing related pages together under a section\ntitle. For example:\n\n\npages:\n- Home: 'index.md'\n- User Guide:\n    - 'VC3 User Guide': 'userguide/vc3-user-guide.md'\n    - 'VC3 Developers Guide': 'userguide/vc3-dev-guide.md'\n\n\n\n\nWith the above configuration we have two top level sections: Home and User\nGuide. Then under User Guide we have two sub pages, VC3 User Guide and\nVC3 Developers Guide.\n\n\nProject layout\n\n\nmkdocs.yml      # The configuration file.\ndocs/\n    css/\n                # The custom css file to overwrite original MK Docs styling\n    img/        # The folder for all relevant img files\n    userguide/  # VC3 User Guide\n    index.md    # The documentation homepage.\n    glossary.md # The documentation glossary\n    ...         # Other markdown pages, images and other files.\n\n\n\nLinks\n\n\nCreate simple links by wrapping square brackets around the link text and\n  round brackets around the URL:\n\n\n[VC3](http://virtualclusters.org/)\n\n\n\nIf you want to give your readers an extra about the link that they're about to follow you can set a link title:\n\n\n[VC3](http://virtualclusters.org/ \"Virtual Clusters for Community Computation\")\n\n\n\nTitles usually appear as a tooltip when you hover over the link, and help search engines work out what a page is about.\n\n\nImages\n\n\nSave all relevant images within the \nimg\n directory located at\n\nvc3-mkdocs/docs/img/\n. If you want to add an image to any doc, you may simply\ncall the image file:\n\n\n![image-name-here](../img/image-file-name.png)\n\n\n\nNotes\n\n\nYou may add notes or warnings to docs:\n\n\n!!! note\n    This portion of VC3\u2018s documentation is a highlighted note\n\n!!! warning\n    This portion of VC3\u2018s documentation is a highlighted warning\n\n\n\n\n...will produce:\n\n\n\n\nNote\n\n\nThis portion of VC3\u2018s documentation is a highlighted note\n\n\n\n\n\n\nWarning\n\n\nThis portion of VC3\u2018s documentation is a highlighted note\n\n\n\n\nCommands\n\n\nYou should be able to edit specific pages directly by clicking on the Edit\nGithub link on the top right of the page and submitting PRs. However, if you\ndecide to clone the entire documentation project, here are the basic commands\nrequired for quickly building the static page.\n\n\n\n\nmkdocs new [dir-name]\n - Create a new project.\n\n\nmkdocs serve\n - Start the live-reloading docs server.\n\n\nmkdocs build\n - Build the documentation site.\n\n\nmkdocs help\n - Print this help message.",
-            "title": "MK Docs Cheatsheet"
-        },
-        {
-            "location": "/mkcommands/#mk-docs-cheatsheet",
-            "text": "",
-            "title": "MK Docs Cheatsheet"
-        },
-        {
-            "location": "/mkcommands/#configure-pages-and-navigation",
-            "text": "The page configuration may be added/edited in the  mkdocs.yml  file, which will\nthen appear on the nav-bar.  A simple pages configuration looks like this:  pages:\n- 'index.md'\n- 'vc3-user-guide.md'\n- 'glossary.md'  This example will build two pages at the top level nav-bar, and will have\ntheir titles automatically inferred from their respective filenames. In order to\nprovide custom names for these pages, they may be added before their filenames:  pages:\n- Home: index.md\n- User Guide: vc3-user-guide.md",
-            "title": "Configure Pages and Navigation"
-        },
-        {
-            "location": "/mkcommands/#multilevel-documentation",
-            "text": "Subsections can be created by listing related pages together under a section\ntitle. For example:  pages:\n- Home: 'index.md'\n- User Guide:\n    - 'VC3 User Guide': 'userguide/vc3-user-guide.md'\n    - 'VC3 Developers Guide': 'userguide/vc3-dev-guide.md'  With the above configuration we have two top level sections: Home and User\nGuide. Then under User Guide we have two sub pages, VC3 User Guide and\nVC3 Developers Guide.",
-            "title": "Multilevel Documentation"
-        },
-        {
-            "location": "/mkcommands/#project-layout",
-            "text": "mkdocs.yml      # The configuration file.\ndocs/\n    css/\n                # The custom css file to overwrite original MK Docs styling\n    img/        # The folder for all relevant img files\n    userguide/  # VC3 User Guide\n    index.md    # The documentation homepage.\n    glossary.md # The documentation glossary\n    ...         # Other markdown pages, images and other files.",
-            "title": "Project layout"
-        },
-        {
-            "location": "/mkcommands/#links",
-            "text": "Create simple links by wrapping square brackets around the link text and\n  round brackets around the URL:  [VC3](http://virtualclusters.org/)  If you want to give your readers an extra about the link that they're about to follow you can set a link title:  [VC3](http://virtualclusters.org/ \"Virtual Clusters for Community Computation\")  Titles usually appear as a tooltip when you hover over the link, and help search engines work out what a page is about.",
-            "title": "Links"
-        },
-        {
-            "location": "/mkcommands/#images",
-            "text": "Save all relevant images within the  img  directory located at vc3-mkdocs/docs/img/ . If you want to add an image to any doc, you may simply\ncall the image file:  ![image-name-here](../img/image-file-name.png)",
-            "title": "Images"
-        },
-        {
-            "location": "/mkcommands/#notes",
-            "text": "You may add notes or warnings to docs:  !!! note\n    This portion of VC3\u2018s documentation is a highlighted note\n\n!!! warning\n    This portion of VC3\u2018s documentation is a highlighted warning  ...will produce:   Note  This portion of VC3\u2018s documentation is a highlighted note    Warning  This portion of VC3\u2018s documentation is a highlighted note",
-            "title": "Notes"
-        },
-        {
-            "location": "/mkcommands/#commands",
-            "text": "You should be able to edit specific pages directly by clicking on the Edit\nGithub link on the top right of the page and submitting PRs. However, if you\ndecide to clone the entire documentation project, here are the basic commands\nrequired for quickly building the static page.   mkdocs new [dir-name]  - Create a new project.  mkdocs serve  - Start the live-reloading docs server.  mkdocs build  - Build the documentation site.  mkdocs help  - Print this help message.",
-            "title": "Commands"
         }
     ]
 }
