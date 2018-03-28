@@ -17,8 +17,12 @@
      <changefreq>daily</changefreq>
     </url>
         
+    
+
+    
+        
     <url>
-     <loc>https://vc3-project.github.io/vc3-mkdocs//userguide/vc3-dev-guide/</loc>
+     <loc>https://vc3-project.github.io/vc3-mkdocs//devguide/vc3-builder/</loc>
      <lastmod>2018-03-28</lastmod>
      <changefreq>daily</changefreq>
     </url>
