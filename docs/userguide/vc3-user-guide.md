@@ -26,9 +26,9 @@ this will take you to a [Globus](https://globus.org) sign-in site.
 
 You will then be asked to sign in with your institutional identity, or your
 Globus ID. If you are using the former, simply type in the name of your
-institution and click “Continue”. Proceed to [Step 3a](#3a-login-with-your-institutional-id).
+institution and click "Continue". Proceed to [Step 3a](###3a.-Login-with-your-institutional-ID).
 
-Otherwise, click “Sign in with Globus ID” and proceed to the alternate [Step 3b](#3b-login-with-your-globus-id).
+Otherwise, click "Globus ID to sign in" and proceed to the alternate Step 3b.
 
 ![step2](../img/screenshot_273.png)
 
@@ -42,9 +42,21 @@ sent to the VC3 or Globus web portals. Continue to step 4.
 
 ### 3b. Login with your Globus ID
 
-(_Alternative step - if you do not have an institutional ID supported by Globus_)
+Once you have clicked on the "Globus ID to sign in" link, you will be presented with the page below. Please, proceed to log in if you already have a globus account, or click on the upper right link to create a new globus account.
 
-<– Globus ID page –>
+![step3b](../img/screenshot_275b.png)
+
+If you are creating a new account, a short form to fill up will be shown next (see below).
+
+![step3b1](../img/screenshot_275c.png)
+
+ After you have completed this form, a confirmation e-mail with a verification code will be sent. Copy and paste such code and click on the "verify" button.
+ 
+![step3b2](../img/screenshot_275d.png)
+
+After your account is verified, you will be presented with the page below. Click on "Continue" to finalize the sign up process.
+
+![step3b3](../img/screenshot_275e.png)
 
 ## Complete or update your VC3 profile
 
@@ -52,7 +64,7 @@ Once you have signed in, you’ll be asked to update or complete your VC3 profil
 with information such as your Institution and any other information we cannot
 directly extract from your Globus account. Click “Update Profile” once done.
 
-![step4](../img/screenshot_276.png)
+![step4](../img/01_profile_edit.png)
 
 ## Connect an Allocation
 
@@ -65,23 +77,23 @@ billed as Service Units (many HPC centers), dollars (AWS, GCE), or priority
 Clicking My Allocations on the left shows all allocations currently associated
 with your account. You may select a new one by clicking Connect Allocation.
 
-![step5](../img/screenshot_277.png)
+![step5](../img/03_allocation_list.png)
 
 You will be able to select a resource target from the drop down menu, and enter
 an account name for the resource. This is the same account name that you use to
 SSH to the remote system.
 
-![step5a](../img/screenshot_278.png)
+![step5a](../img/04_allocation_create.png)
 
 Once you’ve connected your allocation, the system will validate it.
 
-![step5b](../img/screenshot_279.png)
+![step5b](../img/05_allocation_ready.png)
 
 In order to create a virtual cluster, the VC3 software needs to be able to SSH
 to the remote resource. If you click your allocation, you should see a section
 titled Public Token.
 
-![step5c](../img/screenshot_281.png)
+![step5c](../img/06_allocation_prof.png)
 
 You will need to add this token to your Unix account, in the file
 ~/.ssh/authorized_keys. You can either edit this file with your favorite editor
@@ -100,17 +112,17 @@ projects to share your allocations and virtual clusters with trusted members of
 your group, laboratory, or collaboration. To start a new project, click
 “Projects” on the sidebar, then click “+ New Project”.
 
-![step6](../img/screenshot_283.png)
+![step6](../img/07_project_list.png)
 
 You may give your project an aribtrary name and choose initial project members.
 Once finished, click “Create Project”.
 
-![step6a](../img/screenshot_284.png)
+![step6a](../img/08_project_create.png)
 
 You should be returned to the Projects page, where you will be able to see all
 of your projects and memberships.
 
-![step6b](../img/screenshot_285.png)
+![step6b](../img/09_project_ready.png)
 
 ## Creating a Cluster Template
 
@@ -123,7 +135,7 @@ To define a new template, click the “Cluster Templates” link on the left pan
 You’ll be able to give your cluster a name, select framework, and number of
 workers. Click “Define Cluster” to finish creating the template.
 
-![step7](../img/screenshot_286.png)
+![step7](../img/11_cluster_create.png)
 
 ## Resources
 
@@ -135,3 +147,6 @@ You can also click an individual resource and see expanded information, such as
 batch system type, links to documentation, etc.
 
 ## Launching a Virtual Cluster
+![step9](../img/12_vc_list.png)
+![step9a](../img/13_vc_create.png)
+![step9b](../img/14_vc_ready.png)
