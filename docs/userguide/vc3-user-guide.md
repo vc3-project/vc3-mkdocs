@@ -26,9 +26,9 @@ this will take you to a [Globus](https://globus.org) sign-in site.
 
 You will then be asked to sign in with your institutional identity, or your
 Globus ID. If you are using the former, simply type in the name of your
-institution and click “Continue”. Proceed to [Step 3a](#3a-login-with-your-institutional-id).
+institution and click "Continue". Proceed to [Step 3a](###3a.-Login-with-your-institutional-ID).
 
-Otherwise, click “Sign in with Globus ID” and proceed to the alternate [Step 3b](#3b-login-with-your-globus-id).
+Otherwise, click "Globus ID to sign in" and proceed to the alternate Step 3b.
 
 ![step2](../img/screenshot_273.png)
 
@@ -42,9 +42,19 @@ sent to the VC3 or Globus web portals. Continue to step 4.
 
 ### 3b. Login with your Globus ID
 
-(_Alternative step - if you do not have an institutional ID supported by Globus_)
+Once you have click on the "Globus ID to sign in" link, you will be presented with the page below. Proceed to log in if you already have a globus account, or click on the upper right link to create an account.
 
-<– Globus ID page –>
+![step3b](../img/screenshot_275b.png)
+
+If you are creating a new account, a short form to fill up will be shown next (see below).
+
+![step3b](../img/screenshot_275c.png)
+
+ After you have completed this form, a confirmation email with a verification code will be sent. Copy and paste such code and click on the "verify" button.
+![step3b](../img/screenshot_275d.png)
+
+After your accound is verified, you will be presented with a page like this. Click on "Continue" to finalize the registration process.
+![step3b](../img/screenshot_275e.png)
 
 ## Complete or update your VC3 profile
 
