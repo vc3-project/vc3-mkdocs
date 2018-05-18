@@ -42,7 +42,7 @@ sent to the VC3 or Globus web portals. Continue to step 4.
 
 ### 3b. Login with your Globus ID
 
-Once you have click on the "Globus ID to sign in" link, you will be presented with the page below. Proceed to log in if you already have a globus account, or click on the upper right link to create an account.
+Once you have clicked on the "Globus ID to sign in" link, you will be presented with the page below. Please, proceed to log in if you already have a globus account, or click on the upper right link to create a new globus account.
 
 ![step3b](../img/screenshot_275b.png)
 
@@ -50,11 +50,11 @@ If you are creating a new account, a short form to fill up will be shown next (s
 
 ![step3b](../img/screenshot_275c.png)
 
- After you have completed this form, a confirmation email with a verification code will be sent. Copy and paste such code and click on the "verify" button.
+ After you have completed this form, a confirmation e-mail with a verification code will be sent. Copy and paste such code and click on the "verify" button.
  
 ![step3b](../img/screenshot_275d.png)
 
-After your accound is verified, you will be presented with a page like this. Click on "Continue" to finalize the registration process.
+After your account is verified, you will be presented with the page below. Click on "Continue" to finalize the sign up process.
 
 ![step3b](../img/screenshot_275e.png)
 
