@@ -7,18 +7,14 @@ In order to use VC3, you’ll need an allocation or account in a target resource
 
   - University of Chicago - Research Computing Center
   - University of Notre Dame - Center for Research Computing
-  - Brookhaven National Laboratory - Scientific Data & Computing Center
-  - Syracuse University - Research Computing
-  - Texas Advanced Computing Center
-  - NERSC
-  - Amazon Web Services
+  - National Energy Research Scientific Computing Center (NERSC)
+  - Pittsburgh Supercomputing Center (Bridges)
   - Open Science Grid
   - and more!
 
-Institutions and resources are added frequently - be sure to subscribe to our
-newsletter and visit [Virtual Clusters](https://www.virtualclusters.org/community)!
+Institutions and resources are added frequently. Check the [Resources](https://www.virtualclusters.org/resources) page for the full list of connected resources in the service.
 
-### Login or Create Account
+### 1. Login or Create Account
 
 When you first visit [Virtual Clusters](https://www.virtualclusters.org), you’ll
 be presented with a Login link in the top right of the screen. Click “Login” -
@@ -26,17 +22,17 @@ this will take you to a [Globus](https://globus.org) sign-in site.
 
 ![step1](../img/screenshot_272.png)
 
-### Sign in to Globus
+### 2. Sign in to Globus
 
 You will then be asked to sign in with your institutional identity, or your
 Globus ID. If you are using the former, simply type in the name of your
-institution and click “Continue”. Proceed to Step 3a.
+institution and click "Continue". Proceed to [Step 3a](###3a.-Login-with-your-institutional-ID).
 
-Otherwise, click “Sign in with Globus ID” and proceed to the alternate Step 3b.
+Otherwise, click "Globus ID to sign in" and proceed to the alternate Step 3b.
 
 ![step2](../img/screenshot_273.png)
 
-## Login with your institutional ID
+### 3a. Login with your institutional ID
 
 You should be presented with a login page for your institutional ID, with your
 institution’s branding. Go ahead and sign-in now. 
@@ -45,11 +41,23 @@ Continue to step 4.
 
 ![step3a](../img/screenshot_275.png)
 
-## Login with your Globus ID
+### 3b. Login with your Globus ID
 
-(_Alternative step - if you do not have an institutional ID supported by Globus_)
+Once you have clicked on the "Globus ID to sign in" link, you will be presented with the page below. Please, proceed to log in if you already have a globus account, or click on the upper right link to create a new globus account.
 
-<– Globus ID page –>
+![step3b](../img/screenshot_275b.png)
+
+If you are creating a new account, a short form to fill up will be shown next (see below).
+
+![step3b](../img/screenshot_275c.png)
+
+ After you have completed this form, a confirmation e-mail with a verification code will be sent. Copy and paste such code and click on the "verify" button.
+ 
+![step3b](../img/screenshot_275d.png)
+
+After your account is verified, you will be presented with the page below. Click on "Continue" to finalize the sign up process.
+
+![step3b](../img/screenshot_275e.png)
 
 ## Complete or update your VC3 profile
 
