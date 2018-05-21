@@ -1,18 +1,30 @@
 site_name: VC3
-site_url: https://www.docs.virtualclusters.org/
+site_url: https://vc3-project.github.io/vc3-mkdocs/
 site_description: VC3 Documentation for Users and Developers
-# theme_dir: 'custom_theme'
-# theme: yeti
 repo_url: https://github.com/vc3-project/vc3-mkdocs
 # edit_url: edit/master/docs/
-extra_css:
-  - css/extra.css
+theme:
+  name: 'material'
+  logo: 'img/favicon.ico'
+  favicon: 'img/favicon.ico'
+extra:
+  social:
+    - type: 'github'
+      link: 'https://github.com/vc3-project'
+    - type: 'twitter'
+      link: 'https://twitter.com/virtualclusters'
+    - type: 'linkedin'
+      link: 'https://linkedin.com/in/squidfunk'
+# extra_css:
+#   - 'css/extra.css'
 pages:
   - Home: index.md
   - User Guide:
     - 'VC3 User Guide': 'userguide/vc3-user-guide.md'
-    - 'VC3 Developers Guide': 'userguide/vc3-dev-guide.md'
+    # - 'VC3 Developers Guide': 'userguide/vc3-dev-guide.md'
+  - Developers Guide:
+    - 'VC3 Builder': 'devguide/vc3-builder.md'
   - Glossary: glossary.md
-  - MK Docs Cheatsheet: mkcommands.md
+  # - MK Docs Cheatsheet: mkcommands.md
 markdown_extensions:
   - admonition

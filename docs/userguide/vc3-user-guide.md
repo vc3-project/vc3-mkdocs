@@ -56,7 +56,19 @@ Once you have signed in, you’ll be asked to update or complete your VC3 profil
 with information such as your Institution and any other information we cannot
 directly extract from your Globus account. Click “Update Profile” once done.
 
-![step4](../img/screenshot_276.png)
+![step4](../img/01_profile_edit.png)
+
+
+## Resources
+
+The VC3 team curates an ever-expanding list of resources for end-users, with a
+focus on Campus Clusters, HPC centers, and Cloud resources. You can find these
+resources by clicking the “Resources” link on the left panel.
+
+You can also click an individual resource and see expanded information, such as
+batch system type, links to documentation, etc.
+
+![](../img/00_resources.png)
 
 ## Connect an Allocation
 
@@ -67,25 +79,26 @@ billed as Service Units (many HPC centers), dollars (AWS, GCE), or priority
 (HTCondor and other opportunistic systems).
 
 Clicking My Allocations on the left shows all allocations currently associated
-with your account. You may select a new one by clicking Connect Allocation.
+with your account. You may select a new one by clicking + New Allocation.
 
-![step5](../img/screenshot_277.png)
+![step5](../img/02_list_allocations.png)
 
 You will be able to select a resource target from the drop down menu, and enter
 an account name for the resource. This is the same account name that you use to
 SSH to the remote system.
 
-![step5a](../img/screenshot_278.png)
+![step5a](../img/03_connect_allocation.png)
 
-Once you’ve connected your allocation, the system will validate it.
+Once you’ve connected your allocation, the system will provide a set of instructions you must follow in order to validate it.
 
-![step5b](../img/screenshot_279.png)
+![step5b](../img/04_validate_allocation.png)
+
 
 In order to create a virtual cluster, the VC3 software needs to be able to SSH
 to the remote resource. If you click your allocation, you should see a section
 titled Public Token.
 
-![step5c](../img/screenshot_281.png)
+<!-- ![step5c](../img/05_validated_allocation.png) -->
 
 You will need to add this token to your Unix account, in the file
 ~/.ssh/authorized_keys. You can either edit this file with your favorite editor
@@ -104,17 +117,17 @@ projects to share your allocations and virtual clusters with trusted members of
 your group, laboratory, or collaboration. To start a new project, click
 “Projects” on the sidebar, then click “+ New Project”.
 
-![step6](../img/screenshot_283.png)
+![step6](../img/06_list_projects.png)
 
-You may give your project an aribtrary name and choose initial project members.
+You may give your project an aribtrary name and choose initial project members and/or allocations.
 Once finished, click “Create Project”.
 
-![step6a](../img/screenshot_284.png)
+![step6a](../img/07_create_project.png)
 
 You should be returned to the Projects page, where you will be able to see all
 of your projects and memberships.
 
-![step6b](../img/screenshot_285.png)
+![step6b](../img/08_return_list_projects.png)
 
 ## Creating a Cluster Template
 
@@ -127,15 +140,35 @@ To define a new template, click the “Cluster Templates” link on the left pan
 You’ll be able to give your cluster a name, select framework, and number of
 workers. Click “Define Cluster” to finish creating the template.
 
-![step7](../img/screenshot_286.png)
-
-## Resources
-
-The VC3 team curates an ever-expanding list of resources for end-users, with a
-focus on Campus Clusters, HPC centers, and Cloud resources. You can find these
-resources by clicking the “Resources” link on the left panel.
-
-You can also click an individual resource and see expanded information, such as
-batch system type, links to documentation, etc.
+![step7](../img/09_create_cluster_template.png)
 
 ## Launching a Virtual Cluster
+
+Once you are apart of a project, which has associated allocations,
+you may launch a Virtual Cluster. In order to do so, click on
+"New Virtual Cluster", found in the Virtual Clusters tab from the left nav-menu.
+
+![step8](../img/11_list_vc.png)
+
+From here, you are prompted to select the project that you would like to use in
+order to launch a Virtual Cluster. Once selected, press 'Next'.
+
+![step9](../img/12_new_vc_init.png)
+
+Give your Virtual Cluster a name, select the cluster template and allocation.
+You may specify how long you would like your Virtual Cluster to run for. If not
+specified, the expiration defaults to 72 hours. Which means that after 72 hours,
+your Virtual Cluster will automatically begin to terminate itself.
+
+![step10](../img/13_new_vc_launch.png)
+
+Once launched, you will be redirected to your Virtual Cluster's detailed page,
+where you may track the status if your Virtual Cluster. The head node should take
+a few moments to configure. Once complete, you will be prompted with instructions
+on how to access the head node.
+
+![step11](../img/15_new_vc_profile_pending.png)
+
+![step12](../img/16_new_vc_running.png)
+
+![step13](../img/17_list_vc_running.png)

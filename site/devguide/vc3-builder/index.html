@@ -1,0 +1,1462 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="VC3 Documentation for Users and Developers">
+      
+      
+        <link rel="canonical" href="https://vc3-project.github.io/vc3-mkdocs/devguide/vc3-builder/">
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-0.17.2, mkdocs-material-2.6.0">
+    
+    
+      
+        <title>VC3 Builder - VC3</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.aa3de92b.css">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <a href="#vc3-builder" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://vc3-project.github.io/vc3-mkdocs/" title="VC3" class="md-header-nav__button md-logo">
+          
+            <img src="../../img/favicon.ico" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                VC3
+              </span>
+              <span class="md-header-nav__topic">
+                VC3 Builder
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/vc3-project/vc3-mkdocs/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <span class="md-nav__button md-logo">
+      
+        <img src="../../img/favicon.ico" width="24" height="24">
+      
+    </span>
+    VC3
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/vc3-project/vc3-mkdocs/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      User Guide
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        User Guide
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../userguide/vc3-user-guide/" title="VC3 User Guide" class="md-nav__link">
+      VC3 User Guide
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      Developers Guide
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Developers Guide
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        VC3 Builder
+      </label>
+    
+    <a href="./" title="VC3 Builder" class="md-nav__link md-nav__link--active">
+      VC3 Builder
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#vc3-builder" title="VC3 Builder" class="md-nav__link">
+    VC3 Builder
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#synopsis" title="SYNOPSIS" class="md-nav__link">
+    SYNOPSIS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#description" title="DESCRIPTION" class="md-nav__link">
+    DESCRIPTION
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#home" title="HOME" class="md-nav__link">
+    HOME
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mounting-filesystems" title="MOUNTING FILESYSTEMS" class="md-nav__link">
+    MOUNTING FILESYSTEMS
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#-mount-x" title="--mount /x" class="md-nav__link">
+    --mount /x
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-mount-xy" title="--mount /x:/y" class="md-nav__link">
+    --mount /x:/y
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parallel-build-mode" title="PARALLEL BUILD MODE" class="md-nav__link">
+    PARALLEL BUILD MODE
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recipes" title="RECIPES" class="md-nav__link">
+    RECIPES
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#writing-recipes" title="WRITING RECIPES" class="md-nav__link">
+    WRITING RECIPES
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recipes-that-provide-packages" title="Recipes that provide packages" class="md-nav__link">
+    Recipes that provide packages
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-generic-recipe" title="A generic recipe:" class="md-nav__link">
+    A generic recipe:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-tarball-recipe" title="A tarball recipe:" class="md-nav__link">
+    A tarball recipe:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-configure-recipe" title="A configure recipe:" class="md-nav__link">
+    A configure recipe:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-a-binary-distribution" title="Adding a binary distribution" class="md-nav__link">
+    Adding a binary distribution
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-auto-detection" title="Adding auto-detection:" class="md-nav__link">
+    Adding auto-detection:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-complete-recipe" title="The complete recipe" class="md-nav__link">
+    The complete recipe
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recipes-that-provide-environments" title="Recipes that provide environments" class="md-nav__link">
+    Recipes that provide environments
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#environment-prologues" title="Environment prologues" class="md-nav__link">
+    Environment prologues
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#environment-wrappers" title="Environment wrappers" class="md-nav__link">
+    Environment wrappers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operating-system-recipes" title="Operating system recipes" class="md-nav__link">
+    Operating system recipes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recipes-bits-and-pieces" title="Recipes bits-and-pieces" class="md-nav__link">
+    Recipes bits-and-pieces
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-recipes-to-the-vc3-builder-executable" title="ADDING RECIPES TO THE vc3-builder EXECUTABLE" class="md-nav__link">
+    ADDING RECIPES TO THE vc3-builder EXECUTABLE
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compiling-the-builder-as-a-static-binary" title="COMPILING THE BUILDER AS A STATIC BINARY" class="md-nav__link">
+    COMPILING THE BUILDER AS A STATIC BINARY
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reference" title="REFERENCE" class="md-nav__link">
+    REFERENCE
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../glossary/" title="Glossary" class="md-nav__link">
+      Glossary
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#vc3-builder" title="VC3 Builder" class="md-nav__link">
+    VC3 Builder
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#synopsis" title="SYNOPSIS" class="md-nav__link">
+    SYNOPSIS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#description" title="DESCRIPTION" class="md-nav__link">
+    DESCRIPTION
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#home" title="HOME" class="md-nav__link">
+    HOME
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mounting-filesystems" title="MOUNTING FILESYSTEMS" class="md-nav__link">
+    MOUNTING FILESYSTEMS
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#-mount-x" title="--mount /x" class="md-nav__link">
+    --mount /x
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-mount-xy" title="--mount /x:/y" class="md-nav__link">
+    --mount /x:/y
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parallel-build-mode" title="PARALLEL BUILD MODE" class="md-nav__link">
+    PARALLEL BUILD MODE
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recipes" title="RECIPES" class="md-nav__link">
+    RECIPES
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#writing-recipes" title="WRITING RECIPES" class="md-nav__link">
+    WRITING RECIPES
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recipes-that-provide-packages" title="Recipes that provide packages" class="md-nav__link">
+    Recipes that provide packages
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-generic-recipe" title="A generic recipe:" class="md-nav__link">
+    A generic recipe:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-tarball-recipe" title="A tarball recipe:" class="md-nav__link">
+    A tarball recipe:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-configure-recipe" title="A configure recipe:" class="md-nav__link">
+    A configure recipe:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-a-binary-distribution" title="Adding a binary distribution" class="md-nav__link">
+    Adding a binary distribution
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-auto-detection" title="Adding auto-detection:" class="md-nav__link">
+    Adding auto-detection:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-complete-recipe" title="The complete recipe" class="md-nav__link">
+    The complete recipe
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recipes-that-provide-environments" title="Recipes that provide environments" class="md-nav__link">
+    Recipes that provide environments
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#environment-prologues" title="Environment prologues" class="md-nav__link">
+    Environment prologues
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#environment-wrappers" title="Environment wrappers" class="md-nav__link">
+    Environment wrappers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operating-system-recipes" title="Operating system recipes" class="md-nav__link">
+    Operating system recipes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recipes-bits-and-pieces" title="Recipes bits-and-pieces" class="md-nav__link">
+    Recipes bits-and-pieces
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-recipes-to-the-vc3-builder-executable" title="ADDING RECIPES TO THE vc3-builder EXECUTABLE" class="md-nav__link">
+    ADDING RECIPES TO THE vc3-builder EXECUTABLE
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compiling-the-builder-as-a-static-binary" title="COMPILING THE BUILDER AS A STATIC BINARY" class="md-nav__link">
+    COMPILING THE BUILDER AS A STATIC BINARY
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reference" title="REFERENCE" class="md-nav__link">
+    REFERENCE
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/vc3-project/vc3-mkdocs/edit/master/docs/devguide/vc3-builder.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                  <h1>VC3 Builder</h1>
+                
+                <h2 id="vc3-builder">VC3 Builder</h2>
+<p><strong>vc3-builder</strong> - Deploy software environments in clusters without administrator priviliges</p>
+<h3 id="synopsis">SYNOPSIS</h3>
+<hr />
+<p><strong>vc3-builder</strong> [options] --require package[:min_version[:max_version]] --require ... [-- command-and-args]</p>
+<h3 id="description">DESCRIPTION</h3>
+<hr />
+<p>The <strong>vc3-builder</strong> is a tool to manage software stacks without administrator
+priviliges. Its primary application comes in deploying software dependencies in
+cloud, grid, and opportunistic computing, where deployment must be performed
+together with a batch job execution.</p>
+<p><strong>vc3-builder</strong> is a self-contained program (including the repository of
+dependencies recipes). If desired, it can be compiled to a truly static binary
+(<a href="#compiling-the-builder-as-a-static-binary">see below</a>).</p>
+<p>From the end-user perspective, <strong>vc3-builder</strong> is invoked as a command line
+tool which states the desired dependencies.  The builder will perform whatever
+work is necessary to deliver those dependencies, then start a shell with the
+software activated. For example, assume the original environment is a RHEL7, but we need to run the bioinformatics tool <a href="https://blast.ncbi.nlm.nih.gov/Blast.cgi">NCBI BLAST</a> using RHEL6:</p>
+<pre><code>$ cat /etc/redhat-release
+Red Hat Enterprise Linux Server release 7.4 (Maipo)
+$ ./vc3-builder --install ~/tmp/my-vc3 --require-os redhat6 --require ncbi-blast
+OS trying:         redhat6 os-native
+OS fail prereq:    redhat6 os-native
+OS trying:         redhat6 singularity
+..Plan:    ncbi-blast =&gt; [, ]
+..Try:     ncbi-blast =&gt; v2.2.28
+..Refining version: ncbi-blast v2.2.28 =&gt; [, ]
+..Success: ncbi-blast v2.2.28 =&gt; [, ]
+processing for ncbi-blast-v2.2.28
+downloading 'ncbi-blast-2.2.28+-x64-linux.tar.gz' from http://download.virtualclusters.org/builder-files
+preparing 'ncbi-blast' for x86_64/redhat6.9
+details: /opt/vc3-root/x86_64/redhat6.9/ncbi-blast/v2.2.28/ncbi-blast-build-log
+sh-4.1$ cat /etc/redhat-release
+CentOS release 6.9 (Final)
+sh-4.1$ which blastn
+/opt/vc3-root/x86_64/redhat6.9/ncbi-blast/v2.2.28/bin/blastn
+sh-4.1$ exit
+$ ls -d ~/tmp/my-vc3
+/home/btovar/tmp/my-vc3
+</code></pre>
+
+<p>In the first stage, the builder verifies the operating system requirement.
+Since the native environment is not RHEL6, it tries to fulfill the requirement
+using a container image. If the native environment would not support
+containers, the builder terminates indicating that the operating system
+requirement cannot be fulfilled.</p>
+<p>In the second stage, the builder checks if ncbi-blast is already installed.
+Since it is not, it downloads it and sets it up accordingly. As requested, all
+the installation was done in <code>/home/btovar/tmp/my-vc3</code>, a directory that was
+available as <code>/opt/vc3-root</code> inside the container.</p>
+<p>As another example, the builder provides support for <a href="https://cernvm.cern.ch/portal/filesystem">cvmfs</a>:</p>
+<pre><code>$ stat -t /cvmfs/cms.cern.ch
+stat: cannot stat '/cvmfs/cms.cern.ch': No such file or directory
+$ ./vc3-builder --require cvmfs
+./vc3-builder --require cvmfs
+..Plan:    cvmfs =&gt; [, ]
+..Try:     cvmfs =&gt; v2.4.0
+..Refining version: cvmfs v2.4.0 =&gt; [, ]
+....Plan:    cvmfs-parrot-libcvmfs =&gt; [v2.4.0, ]
+
+... etc ...
+
+sh-4.1$ stat -t /cvmfs/cms.cern.ch
+/cvmfs/cms.cern.ch 4096 9 41ed 0 0 1 256 1 0 1 1409299789 1409299789 1409299789 0 65336
+</code></pre>
+
+<p>In this case, the filesystem <code>cvmfs</code> is not provided natively and the builder
+tries to fulfill the requirement using the <a href="http://ccl.cse.nd.edu/software/parrot">parrot virtual file system</a>.</p>
+<p>The builder installs dependencies as needed. For example, simply requiring
+<code>python</code> most likely will provide a python installation already in the system:</p>
+<pre><code>$ ./vc3-builder --require python                             
+..Plan:    python =&gt; [, ]
+..Try:     python =&gt; v2.7.5
+..Refining version: python 2.7.5 =&gt; [, ]
+..Success: python v2.7.5 =&gt; [, ]
+processing for python-v2.7.5
+sh-4.2$ which python
+/bin/python
+sh-4.2$
+</code></pre>
+
+<p>However, if we require the specific version:</p>
+<pre><code>$ ./vc3-builder --require python:2.7.12
+..Plan:    python =&gt; [2.7.12, ]
+..Try:     python =&gt; v2.7.5
+..Incorrect version: v2.7.5 =&gt; [v2.7.12,]
+..Try:     python =&gt; v2.7.12
+..Refining version: python v2.7.12 =&gt; [v2.7.12, ]
+....Plan:    libffi =&gt; [v3.2.1, ]
+....Try:     libffi =&gt; v3.2.1
+....Refining version: libffi v3.2.1 =&gt; [v3.2.1, ]
+....Success: libffi v3.2.1 =&gt; [v3.2.1, ]
+
+... etc ...
+
+sh-4.2$ which python
+/home/btovar/vc3-root/x86_64/redhat7.4/python/v2.7.12/bin/python
+</code></pre>
+
+<p>Use <code>./vc3-builder --list</code> to obtain the current list of packages available.</p>
+<h3 id="home">HOME</h3>
+<hr />
+<p>By default, the HOME variable is to a directory created by the builder. This
+can be changed using the <code>--home</code> option.</p>
+<h3 id="mounting-filesystems">MOUNTING FILESYSTEMS</h3>
+<hr />
+<p>The builder provides the <code>--mount</code> argument to optionally mount directories. It has two forms <code>--mount /x</code> and <code>--mount /x:/y</code></p>
+<h4 id="-mount-x">--mount /x</h4>
+<p>If executing in the native host environment, the builder simply ensured that the directory <code>/x</code> is accessible. If not, it terminates with an error.</p>
+<p>If providing the environment with a container, the host environment path <code>/x</code> is mounted inside the container as <code>/x</code>.</p>
+<h4 id="-mount-xy">--mount /x:/y</h4>
+<p>If executing in the native host environment, and <code>/x</code> and <code>/y</code> are
+different, the builder reports an error, otherwise it works as <code>--mount /x</code>.</p>
+<p>When executing inside a container, the host environment path <code>/x</code> is mounted
+inside the container as <code>/y</code>.</p>
+<p>Even when the host operating system fulfills the <code>--require-os</code> argument, a
+container may still be used to fulfill a <code>--mount</code> requirement:</p>
+<pre><code>$ ./vc3-builder --require-os redhat7 --mount /var/scratch/btovar:/madeuppath -- stat -t /madeuppath
+OS trying:         redhat7 os-native
+Mount source '/var/scratch/btovar' and target '/madeuppath' are different.
+OS fail mounts:    redhat7 os-native
+OS trying:         redhat7 singularity
+/madeuppath 4096 8 41ed 196886 0 805 5111810 5 0 0 1520946165 1517595650 1517595650 0 4096
+$
+</code></pre>
+
+<h3 id="parallel-build-mode">PARALLEL BUILD MODE</h3>
+<hr />
+<p>If a shared filesystem is available, the builder can be instructed to execute
+builds in parallel.  Only steps that can be executed concurrently, and for
+which their dependencies are already fulfilled are queued for execution.</p>
+<p>For parallel build installations, use the <code>--parallel</code> option. It receives one
+argument, a directory to create the parallel build sandbox inside the builder's
+home dir. For example, to build the bioinformatics pipeline <code>maker</code> in parallel
+mode using SLURM:</p>
+<pre><code>$ ./vc3-builder --require maker --install /scratch365/b/btovar/my-shared-dir --parallel my-parallel-build --parallel-mode slurm
+
+(... clipped build information...)
+
+Parallel build mode complete. To run type:
+
+VC3_ROOT=/scratch365/b/btovar/my-shared-dir
+VC3_DB=/scratch365/b/btovar/my-shared-dir/my-parallel-build/recipes
+
+./vc3-builder --database ${VC3_DB} --install ${VC3_ROOT} --require maker
+
+</code></pre>
+
+<p>In addition to SLURM, other batch systems available are <code>condor</code>, <code>slurm</code>,
+<code>sge</code>, <code>torque</code>, <code>moab</code>, <code>amazon</code>, <code>workqueue</code> and <code>local</code>. If a mode is not
+specified, <code>local</code> is used.  <code>local</code> may also be used.</p>
+<h3 id="recipes">RECIPES</h3>
+<hr />
+<p>The <strong>vc3-builder</strong> includes a repository of recipes. To list the packages available for the <code>--require</code> option, use:</p>
+<pre><code>./vc3-builder --list
+atlas-local-root-base-environment:v1.0
+augustus:v2.4
+cctools:v6.2.5
+cctools-unstable:v7.0.0
+charm:v6.7.1
+cmake:auto
+cmake:v3.10.2
+... etc ...
+</code></pre>
+
+<p>For operating systems accepted by the <code>--require-os</code> option use:</p>
+<pre><code>./vc3-builder --list=os    
+debian9:auto
+debian9:v9.2
+opensuse42:auto
+opensuse42:v42.3
+redhat6:auto
+redhat6:v6.9
+redhat7:auto
+redhat7:v7.4
+ubuntu16:auto
+ubuntu16:v16
+</code></pre>
+
+<p>When a version appears as <strong>auto</strong>, it means that the builder knows how to
+recognize that the correspoding requirement is already supplied by the host
+system.</p>
+<h4 id="writing-recipes">WRITING RECIPES</h4>
+<p>The builder can be provided with additional package recipes using the
+--database=\&lt;catalog> option. The option can be specified several times, with
+latter package recipes overwriting previous ones.</p>
+<p>The --database option accepts directory or file names. If a directory, it is
+searched recursevely for files with the <code>.json</code> extension. Files are read in
+lexicographical order.</p>
+<p>A recipe catalog is a JSON encoded object, in which the keys of the object are
+the names of the packages. Each package is a JSON object that, among other
+fields, specifies a list of versions of the package and a recipe to fulfill
+that version.</p>
+<h5 id="recipes-that-provide-packages">Recipes that provide packages</h5>
+<p>As an example, we will write the recipes for <code>wget</code>. First as a generic recipe,
+and then with different specific support that builder provides.</p>
+<h5 id="a-generic-recipe">A generic recipe:</h5>
+<pre><code class="json">$ cat my-wget-recipe.json
+{
+    &quot;wget&quot;:{
+        &quot;versions&quot;:[
+            {
+                &quot;version&quot;:&quot;v1.19.4&quot;,
+                &quot;source&quot;:{
+                    &quot;type&quot;:&quot;generic&quot;,
+                    &quot;files&quot;:[ &quot;wget-1.19.4.tar.gz&quot; ],
+                    &quot;recipe&quot;:[
+                        &quot;tar xf wget-1.19.4.tar.gz&quot;,
+                        &quot;./configure --prefix=${VC3_PREFIX} --with-zlib --with-ssl=openssl --with-libssl-prefix=${VC3_ROOT_OPENSSL} --with-libuuid&quot;,
+                        &quot;make&quot;,
+                        &quot;make install&quot;
+                    ],
+                    &quot;dependencies&quot;:{
+                        &quot;zlib&quot;:[ &quot;v1.2&quot; ],
+                        &quot;openssl&quot;:[ &quot;v1.0.2&quot; ],
+                        &quot;uuid&quot;:[ &quot;v1.0&quot; ],
+                        &quot;libssh2&quot;:[ &quot;v1.8.0&quot; ]
+                    }
+                }
+            }
+        ],
+        &quot;environment-variables&quot;:[
+               {
+                &quot;name&quot;:&quot;PATH&quot;,
+                &quot;value&quot;:&quot;bin&quot;
+               }
+        ]
+    }
+}
+</code></pre>
+
+<p>The field <code>versions</code> inside the package definition is a list of JSON objects,
+with each object providing the recipe for a version.</p>
+<p>The files listed in <code>files</code> are automatically downloaded from the site pointed
+by the --repository option.  The source specification additionaly accepts the
+<code>mirrors</code> field, which is a list of alternative download location for <code>files</code>.
+Mirrors are tried in order, finally falling back to the --repository option.</p>
+<p>The lines in the <code>recipe</code> field are executed one by one inside a shell.</p>
+<p>Dependencies list the name of the package and a range of acceptable versions.
+If only one version is provided, it is taken as a minimum acceptable version.
+Dependencies can be specified per version, as in this case, or per package, in
+which case they are applied to all the versions.</p>
+<p>During the recipe execution, several environment variables are available. For
+example, VC3_PREFIX, which points to the package installation directory. Each
+package is installed into its own directory. Also, for each of the
+dependencies, a VC3_ROOT_dependency variable points to the dependency
+installation directory.</p>
+<p>When <code>wget</code> is set as a requirement, the value of <code>$VC3_ROOT_WGET/bin</code> is added
+to the <code>PATH</code>.</p>
+<h5 id="a-tarball-recipe">A tarball recipe:</h5>
+<p>We can refine the recipe above by using the <code>tarball</code> source type, which automatically untars the first file listed in <code>files</code>:</p>
+<pre><code class="json">{
+    &quot;wget&quot;:{
+        &quot;versions&quot;:[
+            {
+                &quot;version&quot;:&quot;v1.19.4&quot;,
+                &quot;source&quot;:{
+                    &quot;type&quot;:&quot;tarball&quot;,
+                    &quot;files&quot;:[ &quot;wget-1.19.4.tar.gz&quot; ],
+                    &quot;recipe&quot;:[
+                        &quot;./configure --prefix=${VC3_PREFIX} --with-zlib --with-ssl=openssl --with-libssl-prefix=${VC3_ROOT_OPENSSL} --with-libuuid&quot;,
+                        &quot;make&quot;,
+                        &quot;make install&quot;
+                    ]
+                }
+            }
+        ],
+ &quot;... etc ...&quot;
+  }
+}
+
+</code></pre>
+
+<h5 id="a-configure-recipe">A configure recipe:</h5>
+<p>Further, we can do without the recipe using the <code>configure</code> type:</p>
+<pre><code class="json">{
+    &quot;wget&quot;:{
+        &quot;versions&quot;:[
+            {
+                &quot;version&quot;:&quot;v1.19.4&quot;,
+                &quot;source&quot;:{
+                    &quot;type&quot;:&quot;configure&quot;,
+                    &quot;files&quot;:[ &quot;wget-1.19.4.tar.gz&quot; ],
+                    &quot;options&quot;:&quot;--with-zlib --with-ssl=openssl --with-libssl-prefix=${VC3_ROOT_OPENSSL} --with-libuuid&quot;,
+                }
+            }
+        ],
+ &quot;... etc ...&quot;
+  }
+}
+</code></pre>
+
+<p>For the <code>configure</code> type, there are also the <code>preface</code> and <code>postface</code> fields.
+They are lists of shell commands (as <code>recipe</code>), that execute before and after,
+respectively, of the <code>configure; make; make install</code> step.</p>
+<h5 id="adding-a-binary-distribution">Adding a binary distribution</h5>
+<pre><code class="json"> &quot;wget&quot;:{
+        &quot;versions&quot;:[
+            {
+               &quot;version&quot;:&quot;v1.81&quot;,
+                &quot;source&quot;:{
+                    &quot;type&quot;:&quot;binary&quot;,
+                    &quot;native&quot;:&quot;x86_64&quot;,
+                    &quot;files&quot;:[
+                        &quot;wget-1.18-1.tar.gz&quot;
+                    ]
+                }
+            },
+            {
+                &quot;version&quot;:&quot;v1.19.4&quot;,
+                &quot;source&quot;:{
+                    &quot;type&quot;:&quot;configure&quot;,
+ &quot;... etc ...&quot;
+    }
+  }]
+}
+
+</code></pre>
+
+<p>We include the <code>binary</code> version before the <code>configure</code> version as they are
+tried sequentially, and we would prefer not to build <code>wget</code> if it is not
+necessary. The tarball provided includes a statically linked version of <code>wget</code>,
+and the architecture requirement is specified with the <code>native</code> field.</p>
+<p>Tarballs of binaries should have the file hierarchy: <code>dir/{bin,etc}</code>.</p>
+<h5 id="adding-auto-detection">Adding auto-detection:</h5>
+<pre><code class="json"> &quot;wget&quot;:{
+        &quot;versions&quot;:[
+            {
+                &quot;version&quot;:&quot;auto&quot;,
+                &quot;source&quot;:{
+                    &quot;type&quot;:&quot;system&quot;,
+                    &quot;executable&quot;:&quot;wget&quot;
+                }
+            },
+            {
+               &quot;version&quot;:&quot;v1.81&quot;,
+                &quot;source&quot;:{
+                    &quot;type&quot;:&quot;binary&quot;,
+ &quot;... etc ...&quot;
+    }
+  }]
+}
+</code></pre>
+
+<p>In this case, we simply provide the name of the executable to test, and the
+builder will try to get the version number out of the first line of the output
+from <code>executable --version</code>.</p>
+<p>If an system executable does not provide version information in such manner,
+<code>source</code> needs to provide an <code>auto-version</code> field that provides a recipe that
+eventually prints to standard output a line such as:</p>
+<pre><code>VC3_VERSION_SYSTEM: xxx.yyy.zzz
+</code></pre>
+
+<p>For example, in <code>perl</code> the version information is provided by the <code>$^V</code>
+variable, and the <code>auto-version</code> field would look like:</p>
+<pre><code class="json">...
+
+        &quot;auto-version&quot;:[
+            &quot;perl -e  'print(\&quot;VC3_VERSION_SYSTEM: $^V\\n\&quot;);'&quot;
+        ],
+...
+</code></pre>
+
+<p>Note that quotes and backslashes need to be escaped so that they are not
+interpreted as part of the JSON structure.</p>
+<h5 id="the-complete-recipe">The complete recipe</h5>
+<pre><code class="json">{
+    &quot;wget&quot;:{
+        &quot;tags&quot;:[&quot;data transfer tools&quot;],
+        &quot;show-in-list&quot;:1,
+        &quot;versions&quot;:[
+            {
+                &quot;version&quot;:&quot;auto&quot;,
+                &quot;source&quot;:{
+                    &quot;type&quot;:&quot;system&quot;,
+                    &quot;executable&quot;:&quot;wget&quot;
+                }
+            },
+            {
+                &quot;version&quot;:&quot;v7.51&quot;,
+                &quot;source&quot;:{
+                    &quot;type&quot;:&quot;binary&quot;,
+                    &quot;native&quot;:&quot;x86_64&quot;,
+                    &quot;files&quot;:[
+                        &quot;wget-1.18-1.tar.gz&quot;
+                    ]
+                }
+            },
+            {
+                &quot;version&quot;:&quot;v1.19.4&quot;,
+                &quot;source&quot;:{
+                    &quot;type&quot;:&quot;configure&quot;,
+                    &quot;files&quot;:[ &quot;wget-1.19.4.tar.gz&quot; ],
+                    &quot;options&quot;:&quot;--with-zlib --with-ssl=openssl --with-libssl-prefix=${VC3_ROOT_OPENSSL} --with-libuuid&quot;,
+                },
+                &quot;dependencies&quot;:{
+                    &quot;zlib&quot;:[
+                        &quot;v1.2&quot;
+                    ],
+                    &quot;openssl&quot;:[
+                        &quot;v1.0.2&quot;
+                    ],
+                    &quot;uuid&quot;:[
+                        &quot;v1.0&quot;
+                    ],
+                    &quot;libssh2&quot;:[
+                        &quot;v1.8.0&quot;
+                    ]
+                }
+            }
+        ],
+        &quot;environment-autovars&quot;:[
+            &quot;PATH&quot;
+        ]
+    },
+}
+</code></pre>
+
+<p>We made three changes:</p>
+<ul>
+<li>Added the <code>tags</code> field to classify the package. Listing of packages by tags is available with the <code>--list=section</code> option.</li>
+<li>Added <code>show-in-list</code> field, which allows the package to be displayed by <code>--list</code>.</li>
+<li>Since adding <code>${VC3_ROOT_package}/bin</code> to the <code>PATH</code> is a common operation,
+the builder provides the "environment-autovars" field, which automatically
+constructs common patterns for the variables <code>PATH</code>, <code>LD_LIBRARY_PATH</code>,
+<code>PKG_CONFIG_PATH</code>, <code>LIBRARY_PATH</code>, <code>C_INCLUDE_PATH</code>, <code>CPLUS_INCLUDE_PATH</code>, and
+<code>PERL5LIB</code>.  Support for <code>PYTHONPATH</code> is not provided, as there is not an easy
+way to handle concurrent <code>python2</code> and <code>python3</code> installations.</li>
+</ul>
+<h4 id="recipes-that-provide-environments">Recipes that provide environments</h4>
+<h5 id="environment-prologues">Environment prologues</h5>
+<p>It is sometimes required to run a command to complete setting the environment.
+For example, a script containing evinronment variables may need to be sourced
+before execution. For such cases, the <code>prologue</code> field can be used. The
+following is an example for setting the <a href="http://iopscience.iop.org/article/10.1088/1742-6596/513/3/032013/meta">OSG
+oasis</a>
+environment:</p>
+<pre><code class="json">&quot;...&quot;
+&quot;oasis-environment&quot;:{
+        &quot;versions&quot;:[
+            {
+                &quot;version&quot;:&quot;v1.0&quot;,
+                &quot;type&quot;:&quot;generic&quot;,
+                &quot;prologue&quot;: [
+                    &quot;source /cvmfs/oasis.opensciencegrid.org/osg/modules/lmod/current/init/bash&quot;
+                ],
+                &quot;dependencies&quot;:{
+                    &quot;cvmfs&quot;:[
+                        &quot;v2.0&quot;
+                    ]
+                }
+            }
+        ]
+    },
+&quot;...&quot;
+</code></pre>
+
+<p>The lines in the <code>prologue</code> field are executed for every new shell executed
+inside the builder environment. Note that in this particular case there was no
+need to provide a <code>source</code> field.</p>
+<h5 id="environment-wrappers">Environment wrappers</h5>
+<p>A wrapper is any program that executes the payload of the builder. In the usual
+case, there is no wrapper, and the builder simply executes its payload using
+<code>/bin/sh</code>. In the <a href="#description">introductory examples</a>, we showed the builder
+accessing a filesystem (cvmfs) that was not present in the host system. This
+was done by using the <a href="http://ccl.cse.nd.edu/software/parrot">parrot virtual file
+system</a> as a wrapper as follows:</p>
+<pre><code class="json"> &quot;parrot-wrapper&quot;:{
+        &quot;versions&quot;:[
+            {
+                &quot;version&quot;:&quot;v6.0.0&quot;,
+                &quot;wrapper&quot;:[
+                    &quot;parrot_run&quot;, &quot;--dynamic-mounts&quot;, &quot;{}&quot;
+                ],
+                &quot;dependencies&quot;:{
+                    &quot;cctools&quot;:[
+                        &quot;v6.0.0&quot;
+                    ]
+                }
+            }
+        ]
+    }
+</code></pre>
+
+<p>The <code>parrot_run</code> executable is provided through the <code>cctools</code> dependency. The
+wrapper itself is specified as a list of arguments in the <code>wrapper</code> field. The
+payload is substituted in place of <code>{}</code>. If several wrappers are required, they
+nest inner-to-outer as they appear as arguments to <code>--require</code> in the command
+line.</p>
+<h5 id="operating-system-recipes">Operating system recipes</h5>
+<p>Operating systems recipes are similar to package recipes, but they are labeled
+with the <code>operating-system</code> field. An operating system requirement is specified
+with the <code>--require-os</code> option.</p>
+<p>Here we include an example for Red Hat 7:</p>
+<pre><code class="json">&quot;...&quot;
+    &quot;redhat7&quot;:{
+        &quot;tags&quot;:[&quot;operating systems&quot;],
+        &quot;show-in-list&quot;:1,
+        &quot;operating-system&quot;:1,
+        &quot;versions&quot;:[
+            {
+                &quot;version&quot;:&quot;auto&quot;,
+                &quot;source&quot;:{
+                    &quot;type&quot;:&quot;os-native&quot;,
+                    &quot;native&quot;:&quot;x86_64/redhat7&quot;
+                }
+            },
+            {
+                &quot;version&quot;:&quot;7.4&quot;,
+                &quot;source&quot;:{
+                    &quot;type&quot;:&quot;singularity&quot;,
+                    &quot;image&quot;:&quot;Singularity.vc3.x86_64-centos7.img&quot;
+                }
+            }
+        ]
+    },
+&quot;...&quot;
+</code></pre>
+
+<p>For the <code>os-native</code> type, the <code>native</code> field specifies the target system. It is
+of the form <code>architecture/distribution</code>. Use <code>./vc3-builder --list=os</code> for a
+list of known distributions.</p>
+<p>In the <code>singularity</code> type, the image file provided is downloaded from
+<code>&lt;repository\&gt;/images/singularity</code>, where repository is specified by the
+<code>--repository</code> option. If the image is not file, but starts with <code>docker://</code> or
+<code>shub://</code>, it is downloaded from the corresponding image repository.</p>
+<h4 id="recipes-bits-and-pieces">Recipes bits-and-pieces</h4>
+<p>There are three more fields a version specification accepts:</p>
+<ul>
+<li><code>prerequisites</code>: A list of shell commands which need to succed for the
+version to be included in the build plan. Useful to check if some file is
+present, for example.</li>
+<li><code>phony</code>: In normal operation, the builder executes the recipe of a source
+only once. If <code>phony</code> is set to <code>1</code>, the recipe is executed every time the
+package is required.</li>
+<li><code>local</code>: Only relevant for the <a href="#parallel-build-mode">parallel build mode</a>.
+Indicates that the recipe should be executed locally, and not in a remote
+computational node. It is useful when the recipe takes very little time
+compared to scheduling it for parallel execution.</li>
+</ul>
+<h3 id="adding-recipes-to-the-vc3-builder-executable">ADDING RECIPES TO THE vc3-builder EXECUTABLE</h3>
+<hr />
+<p>First, clone the <code>vc3-builder</code> repository:</p>
+<pre><code>git clone https://github.com/vc3-project/vc3-builder.git
+cd vc3-builder
+</code></pre>
+
+<p>Second, write any recipe files you want included in the <code>recipes</code> directory.
+Recipe files names may not contain spaces.  Recipes may be organized in
+directories, that are read recursevely. Files are read in lexicographical
+order, with later recipe definitions overwriting previous ones if package names
+are repeated.</p>
+<p>Finally, use <code>make</code> to construct the new <code>vc3-builder</code> with your recipes included:</p>
+<pre><code>make clean vc3-builder
+</code></pre>
+
+<h3 id="compiling-the-builder-as-a-static-binary">COMPILING THE BUILDER AS A STATIC BINARY</h3>
+<hr />
+<pre><code>git clone https://github.com/vc3-project/vc3-builder.git
+cd vc3-builder
+make vc3-builder-static
+</code></pre>
+
+<p>The static version will be available at <strong>vc3-builder-static</strong>.
+The steps above set a local <a href="https://www.musl-libc.org">musl-libc</a> installation that compile <strong>vc3-builder</strong> into a <a href="http://software.schmorp.de/pkg/App-Staticperl.html">static perl</a> interpreter.</p>
+<h3 id="reference">REFERENCE</h3>
+<hr />
+<p>Benjamin Tovar, Nicholas Hazekamp, Nathaniel Kremer-Herman, and Douglas Thain.
+<strong>Automatic Dependency Management for Scientific Applications on Clusters,</strong>
+IEEE International Conference on Cloud Engineering (IC2E), April, 2018.</p>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../../userguide/vc3-user-guide/" title="VC3 User Guide" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                VC3 User Guide
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../../glossary/" title="Glossary" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Glossary
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="http://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="https://github.com/vc3-project" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://twitter.com/virtualclusters" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://linkedin.com/in/squidfunk" class="md-footer-social__link fa fa-linkedin"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.9fb73e57.js"></script>
+      
+      <script>app.initialize({version:"0.17.2",url:{base:"../.."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>

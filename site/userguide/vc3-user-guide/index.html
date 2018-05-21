@@ -1,119 +1,553 @@
+
+
+
+
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        
-        <link rel="canonical" href="https://www.docs.virtualclusters.org/userguide/vc3-user-guide/">
-        <link rel="shortcut icon" href="../../img/favicon.ico">
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="VC3 Documentation for Users and Developers">
+      
+      
+        <link rel="canonical" href="https://vc3-project.github.io/vc3-mkdocs/userguide/vc3-user-guide/">
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-0.17.2, mkdocs-material-2.6.0">
+    
+    
+      
         <title>VC3 User Guide - VC3</title>
-        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
-        <link href="../../css/font-awesome-4.5.0.css" rel="stylesheet">
-        <link href="../../css/base.css" rel="stylesheet">
-        <link rel="stylesheet" href="../../css/highlight.css">
-        <link href="../../css/extra.css" rel="stylesheet">
-        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!--[if lt IE 9]>
-            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-        <![endif]-->
-
-        <script src="../../js/jquery-1.10.2.min.js"></script>
-        <script src="../../js/bootstrap-3.0.3.min.js"></script>
-        <script src="../../js/highlight.pack.js"></script> 
-    </head>
-
-    <body>
-
-        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-    <div class="container">
-
-        <!-- Collapsed navigation -->
-        <div class="navbar-header">
-            <!-- Expander button -->
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="../..">VC3</a>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.aa3de92b.css">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <a href="#vc3-user-guide" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://vc3-project.github.io/vc3-mkdocs/" title="VC3" class="md-header-nav__button md-logo">
+          
+            <img src="../../img/favicon.ico" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                VC3
+              </span>
+              <span class="md-header-nav__topic">
+                VC3 User Guide
+              </span>
+            
+          
         </div>
-
-        <!-- Expanded navigation -->
-        <div class="navbar-collapse collapse">
-                <!-- Main navigation -->
-                <ul class="nav navbar-nav">
-                    <li >
-                        <a href="../..">Home</a>
-                    </li>
-                    <li class="dropdown active">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">User Guide <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            
-<li class="active">
-    <a href="./">VC3 User Guide</a>
-</li>
-                            
-<li >
-    <a href="../vc3-dev-guide/">VC3 Developers Guide</a>
-</li>
-                        </ul>
-                    </li>
-                    <li >
-                        <a href="../../glossary/">Glossary</a>
-                    </li>
-                    <li >
-                        <a href="../../mkcommands/">MK Docs Cheatsheet</a>
-                    </li>
-                </ul>
-
-            <ul class="nav navbar-nav navbar-right">
-                <li>
-                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
-                        <i class="fa fa-search"></i> Search
-                    </a>
-                </li>
-                    <li >
-                        <a rel="next" href="../..">
-                            <i class="fa fa-arrow-left"></i> Previous
-                        </a>
-                    </li>
-                    <li >
-                        <a rel="prev" href="../vc3-dev-guide/">
-                            Next <i class="fa fa-arrow-right"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/vc3-project/vc3-mkdocs/edit/master/docs/userguide/vc3-user-guide.md"><i class="fa fa-github"></i> Edit on GitHub</a>
-                    </li>
-            </ul>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
         </div>
+      </div>
     </div>
+  </div>
 </div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
 
-        <div class="container">
-                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
-    <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#vc3-user-guide">VC3 User Guide</a></li>
-            <li><a href="#building-your-first-virtual-cluster">Building Your First Virtual Cluster</a></li>
-            <li><a href="#login-or-create-account">Login or Create Account</a></li>
-            <li><a href="#sign-in-to-globus">Sign in to Globus</a></li>
-            <li><a href="#login-with-your-institutional-id">Login with your institutional ID</a></li>
-            <li><a href="#login-with-your-globus-id">Login with your Globus ID</a></li>
-            <li><a href="#complete-or-update-your-vc3-profile">Complete or update your VC3 profile</a></li>
-            <li><a href="#connect-an-allocation">Connect an Allocation</a></li>
-            <li><a href="#defining-a-project">Defining a Project</a></li>
-            <li><a href="#creating-a-cluster-template">Creating a Cluster Template</a></li>
-            <li><a href="#resources">Resources</a></li>
-            <li><a href="#launching-a-virtual-cluster">Launching a Virtual Cluster</a></li>
+
+  
+
+
+  <a href="https://github.com/vc3-project/vc3-mkdocs/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <span class="md-nav__button md-logo">
+      
+        <img src="../../img/favicon.ico" width="24" height="24">
+      
+    </span>
+    VC3
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/vc3-project/vc3-mkdocs/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      User Guide
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        User Guide
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        VC3 User Guide
+      </label>
+    
+    <a href="./" title="VC3 User Guide" class="md-nav__link md-nav__link--active">
+      VC3 User Guide
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#building-your-first-virtual-cluster" title="Building Your First Virtual Cluster" class="md-nav__link">
+    Building Your First Virtual Cluster
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#login-or-create-account" title="Login or Create Account" class="md-nav__link">
+    Login or Create Account
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sign-in-to-globus" title="Sign in to Globus" class="md-nav__link">
+    Sign in to Globus
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#login-with-your-institutional-id" title="Login with your institutional ID" class="md-nav__link">
+    Login with your institutional ID
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#login-with-your-globus-id" title="Login with your Globus ID" class="md-nav__link">
+    Login with your Globus ID
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#complete-or-update-your-vc3-profile" title="Complete or update your VC3 profile" class="md-nav__link">
+    Complete or update your VC3 profile
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources" title="Resources" class="md-nav__link">
+    Resources
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connect-an-allocation" title="Connect an Allocation" class="md-nav__link">
+    Connect an Allocation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#defining-a-project" title="Defining a Project" class="md-nav__link">
+    Defining a Project
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-cluster-template" title="Creating a Cluster Template" class="md-nav__link">
+    Creating a Cluster Template
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#launching-a-virtual-cluster" title="Launching a Virtual Cluster" class="md-nav__link">
+    Launching a Virtual Cluster
+  </a>
+  
+</li>
+      
+      
+      
     </ul>
-</div></div>
-                <div class="col-md-9" role="main">
+  
+</nav>
+    
+  </li>
 
-<h1 id="vc3-user-guide">VC3 User Guide</h1>
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Developers Guide
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Developers Guide
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../devguide/vc3-builder/" title="VC3 Builder" class="md-nav__link">
+      VC3 Builder
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../glossary/" title="Glossary" class="md-nav__link">
+      Glossary
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#building-your-first-virtual-cluster" title="Building Your First Virtual Cluster" class="md-nav__link">
+    Building Your First Virtual Cluster
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#login-or-create-account" title="Login or Create Account" class="md-nav__link">
+    Login or Create Account
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sign-in-to-globus" title="Sign in to Globus" class="md-nav__link">
+    Sign in to Globus
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#login-with-your-institutional-id" title="Login with your institutional ID" class="md-nav__link">
+    Login with your institutional ID
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#login-with-your-globus-id" title="Login with your Globus ID" class="md-nav__link">
+    Login with your Globus ID
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#complete-or-update-your-vc3-profile" title="Complete or update your VC3 profile" class="md-nav__link">
+    Complete or update your VC3 profile
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources" title="Resources" class="md-nav__link">
+    Resources
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connect-an-allocation" title="Connect an Allocation" class="md-nav__link">
+    Connect an Allocation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#defining-a-project" title="Defining a Project" class="md-nav__link">
+    Defining a Project
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-cluster-template" title="Creating a Cluster Template" class="md-nav__link">
+    Creating a Cluster Template
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#launching-a-virtual-cluster" title="Launching a Virtual Cluster" class="md-nav__link">
+    Launching a Virtual Cluster
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/vc3-project/vc3-mkdocs/edit/master/docs/userguide/vc3-user-guide.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="vc3-user-guide">VC3 User Guide</h1>
 <h3 id="building-your-first-virtual-cluster">Building Your First Virtual Cluster</h3>
 <p><strong>Prerequisites</strong></p>
 <p>In order to use VC3, you’ll need an allocation or account with with a supported target resource. These include, but are not limited to:</p>
@@ -153,7 +587,14 @@ sent to the VC3 or Globus web portals. Continue to step 4.</p>
 <p>Once you have signed in, you’ll be asked to update or complete your VC3 profile
 with information such as your Institution and any other information we cannot
 directly extract from your Globus account. Click “Update Profile” once done.</p>
-<p><img alt="step4" src="../../img/screenshot_276.png" /></p>
+<p><img alt="step4" src="../../img/01_profile_edit.png" /></p>
+<h2 id="resources">Resources</h2>
+<p>The VC3 team curates an ever-expanding list of resources for end-users, with a
+focus on Campus Clusters, HPC centers, and Cloud resources. You can find these
+resources by clicking the “Resources” link on the left panel.</p>
+<p>You can also click an individual resource and see expanded information, such as
+batch system type, links to documentation, etc.</p>
+<p><img alt="" src="../../img/00_resources.png" /></p>
 <h2 id="connect-an-allocation">Connect an Allocation</h2>
 <p>After updating your profile, you can connect an allocation to the VC3 service.
 An allocation, in VC3, is defined as combination of a username and resource
@@ -161,18 +602,19 @@ target that consumes some type of compute unit - regardless of whether it is
 billed as Service Units (many HPC centers), dollars (AWS, GCE), or priority
 (HTCondor and other opportunistic systems).</p>
 <p>Clicking My Allocations on the left shows all allocations currently associated
-with your account. You may select a new one by clicking Connect Allocation.</p>
-<p><img alt="step5" src="../../img/screenshot_277.png" /></p>
+with your account. You may select a new one by clicking + New Allocation.</p>
+<p><img alt="step5" src="../../img/02_list_allocations.png" /></p>
 <p>You will be able to select a resource target from the drop down menu, and enter
 an account name for the resource. This is the same account name that you use to
 SSH to the remote system.</p>
-<p><img alt="step5a" src="../../img/screenshot_278.png" /></p>
-<p>Once you’ve connected your allocation, the system will validate it.</p>
-<p><img alt="step5b" src="../../img/screenshot_279.png" /></p>
+<p><img alt="step5a" src="../../img/03_connect_allocation.png" /></p>
+<p>Once you’ve connected your allocation, the system will provide a set of instructions you must follow in order to validate it.</p>
+<p><img alt="step5b" src="../../img/04_validate_allocation.png" /></p>
 <p>In order to create a virtual cluster, the VC3 software needs to be able to SSH
 to the remote resource. If you click your allocation, you should see a section
 titled Public Token.</p>
-<p><img alt="step5c" src="../../img/screenshot_281.png" /></p>
+<!-- ![step5c](../img/05_validated_allocation.png) -->
+
 <p>You will need to add this token to your Unix account, in the file
 ~/.ssh/authorized_keys. You can either edit this file with your favorite editor
 (such as nano, vim, or emacs), or use the echo command to append it to the
@@ -185,13 +627,13 @@ jobs on your, or your project’s, behalf.</p>
 projects to share your allocations and virtual clusters with trusted members of
 your group, laboratory, or collaboration. To start a new project, click
 “Projects” on the sidebar, then click “+ New Project”.</p>
-<p><img alt="step6" src="../../img/screenshot_283.png" /></p>
-<p>You may give your project an aribtrary name and choose initial project members.
+<p><img alt="step6" src="../../img/06_list_projects.png" /></p>
+<p>You may give your project an aribtrary name and choose initial project members and/or allocations.
 Once finished, click “Create Project”.</p>
-<p><img alt="step6a" src="../../img/screenshot_284.png" /></p>
+<p><img alt="step6a" src="../../img/07_create_project.png" /></p>
 <p>You should be returned to the Projects page, where you will be able to see all
 of your projects and memberships.</p>
-<p><img alt="step6b" src="../../img/screenshot_285.png" /></p>
+<p><img alt="step6b" src="../../img/08_return_list_projects.png" /></p>
 <h2 id="creating-a-cluster-template">Creating a Cluster Template</h2>
 <p>VC3 allows users to create “Cluster Templates” that describe the components of
 their virtual cluster, including number of head nodes, worker nodes, etc. We
@@ -200,89 +642,115 @@ and fixed head nodes.</p>
 <p>To define a new template, click the “Cluster Templates” link on the left panel.
 You’ll be able to give your cluster a name, select framework, and number of
 workers. Click “Define Cluster” to finish creating the template.</p>
-<p><img alt="step7" src="../../img/screenshot_286.png" /></p>
-<h2 id="resources">Resources</h2>
-<p>The VC3 team curates an ever-expanding list of resources for end-users, with a
-focus on Campus Clusters, HPC centers, and Cloud resources. You can find these
-resources by clicking the “Resources” link on the left panel.</p>
-<p>You can also click an individual resource and see expanded information, such as
-batch system type, links to documentation, etc.</p>
-<h2 id="launching-a-virtual-cluster">Launching a Virtual Cluster</h2></div>
+<p><img alt="step7" src="../../img/09_create_cluster_template.png" /></p>
+<h2 id="launching-a-virtual-cluster">Launching a Virtual Cluster</h2>
+<p>Once you are apart of a project, which has associated allocations,
+you may launch a Virtual Cluster. In order to do so, click on
+"New Virtual Cluster", found in the Virtual Clusters tab from the left nav-menu.</p>
+<p><img alt="step8" src="../../img/11_list_vc.png" /></p>
+<p>From here, you are prompted to select the project that you would like to use in
+order to launch a Virtual Cluster. Once selected, press 'Next'.</p>
+<p><img alt="step9" src="../../img/12_new_vc_init.png" /></p>
+<p>Give your Virtual Cluster a name, select the cluster template and allocation.
+You may specify how long you would like your Virtual Cluster to run for. If not
+specified, the expiration defaults to 72 hours. Which means that after 72 hours,
+your Virtual Cluster will automatically begin to terminate itself.</p>
+<p><img alt="step10" src="../../img/13_new_vc_launch.png" /></p>
+<p>Once launched, you will be redirected to your Virtual Cluster's detailed page,
+where you may track the status if your Virtual Cluster. The head node should take
+a few moments to configure. Once complete, you will be prompted with instructions
+on how to access the head node.</p>
+<p><img alt="step11" src="../../img/15_new_vc_profile_pending.png" /></p>
+<p><img alt="step12" src="../../img/16_new_vc_running.png" /></p>
+<p><img alt="step13" src="../../img/17_list_vc_running.png" /></p>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
         </div>
-
-        <footer class="col-md-12">
-            <hr>
-            <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p>
-        </footer>
-        <script>var base_url = '../..';</script>
-        <script src="../../js/base.js"></script>
-        <script src="../../search/require.js"></script>
-        <script src="../../search/search.js"></script>
-
-        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../.." title="Home" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
-            <div class="modal-body">
-                <p>
-                    From here you can search these documents. Enter
-                    your search terms below.
-                </p>
-                <form role="form">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
-                    </div>
-                </form>
-                <div id="mkdocs-search-results"></div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Home
+              </span>
             </div>
-            <div class="modal-footer">
+          </a>
+        
+        
+          <a href="../../devguide/vc3-builder/" title="VC3 Builder" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                VC3 Builder
+              </span>
             </div>
-        </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
     </div>
-</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
-            </div>
-            <div class="modal-body">
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th style="width: 20%;">Keys</th>
-                    <th>Action</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><kbd>?</kbd></td>
-                    <td>Open this help</td>
-                  </tr>
-                  <tr>
-                    <td><kbd>&larr;</kbd></td>
-                    <td>Previous page</td>
-                  </tr>
-                  <tr>
-                    <td><kbd>&rarr;</kbd></td>
-                    <td>Next page</td>
-                  </tr>
-                  <tr>
-                    <td><kbd>s</kbd></td>
-                    <td>Search</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div class="modal-footer">
-            </div>
-        </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="http://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="https://github.com/vc3-project" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://twitter.com/virtualclusters" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://linkedin.com/in/squidfunk" class="md-footer-social__link fa fa-linkedin"></a>
+    
+  </div>
+
+      
     </div>
-</div>
-
-
-    </body>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.9fb73e57.js"></script>
+      
+      <script>app.initialize({version:"0.17.2",url:{base:"../.."}})</script>
+      
+    
+    
+      
+    
+  </body>
 </html>
