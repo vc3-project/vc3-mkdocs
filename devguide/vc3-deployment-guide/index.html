@@ -1,0 +1,1146 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="VC3 Documentation for Users and Developers">
+      
+      
+        <link rel="canonical" href="https://vc3-project.github.io/vc3-mkdocs/devguide/vc3-deployment-guide/">
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-0.17.3, mkdocs-material-2.7.3">
+    
+    
+      
+        <title>VC3 Infrastructure - VC3</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.8d40d89b.css">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+      
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <a href="#prerequisites-for-all-services" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://vc3-project.github.io/vc3-mkdocs/" title="VC3" class="md-header-nav__button md-logo">
+          
+            <img src="../../img/favicon.ico" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                VC3
+              </span>
+              <span class="md-header-nav__topic">
+                VC3 Infrastructure
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/vc3-project/vc3-mkdocs/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <span class="md-nav__button md-logo">
+      
+        <img src="../../img/favicon.ico" width="48" height="48">
+      
+    </span>
+    VC3
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/vc3-project/vc3-mkdocs/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      User Guide
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        User Guide
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../userguide/vc3-user-guide/" title="VC3 User Guide" class="md-nav__link">
+      VC3 User Guide
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      Developers Guide
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Developers Guide
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../vc3-builder/" title="VC3 Builder" class="md-nav__link">
+      VC3 Builder
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        VC3 Infrastructure
+      </label>
+    
+    <a href="./" title="VC3 Infrastructure" class="md-nav__link md-nav__link--active">
+      VC3 Infrastructure
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#adding-keys" title="Adding keys" class="md-nav__link">
+    Adding keys
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installing-the-repos" title="Installing the repos" class="md-nav__link">
+    Installing the repos
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../glossary/" title="Glossary" class="md-nav__link">
+      Glossary
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#adding-keys" title="Adding keys" class="md-nav__link">
+    Adding keys
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installing-the-repos" title="Installing the repos" class="md-nav__link">
+    Installing the repos
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/vc3-project/vc3-mkdocs/edit/master/docs/devguide/vc3-deployment-guide.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <ul>
+<li><a href="#prerequisites-for-all-services">Prerequisites for all services</a></li>
+<li><a href="#adding-keys">Adding keys</a></li>
+<li><a href="#installing-the-repos">Installing the repos</a></li>
+<li><a href="#bootstrapping-authentication-on-the-master">Bootstrapping authentication on the Master</a></li>
+<li><a href="#installing-credible-and-setting-up-certificates">Installing Credible and setting up certificates</a></li>
+<li><a href="#issueing-certificates">Issueing certificates</a></li>
+<li><a href="#vc3-infoservice">VC3 Infoservice</a></li>
+<li><a href="#prerequisites">Prerequisites</a></li>
+<li><a href="#installing-the-infoservice">Installing the Infoservice</a></li>
+<li><a href="#starting-the-infoservice">Starting the Infoservice</a></li>
+<li><a href="#vc3-master">VC3 Master</a></li>
+<li><a href="#installing-the-master">Installing the Master</a></li>
+<li><a href="#launching-the-master">Launching the Master</a></li>
+<li><a href="#vc3-factory">VC3 Factory</a></li>
+<li><a href="#prerequisites-1">Prerequisites</a></li>
+<li><a href="#installing-the-factory">Installing the Factory</a></li>
+<li><a href="#starting-the-factory-and-condor">Starting the Factory and Condor</a></li>
+<li><a href="#monitoring-the-pilots">Monitoring the pilots</a></li>
+<li><a href="#vc3-web-portal">VC3 Web Portal</a></li>
+<li><a href="#prerequisites-2">Prerequisites</a></li>
+<li><a href="#installing-and-running-docker">Installing and running Docker</a></li>
+<li><a href="#issuing-a-certificate-with-let-s-encrypt">Issuing a certificate with Let's Encrypt</a></li>
+<li><a href="#installing-the-web-portal">Installing the web portal</a></li>
+<li><a href="#installing-the-secrets">Installing the secrets</a></li>
+<li><a href="#running-the-container">Running the container</a></li>
+</ul>
+<h1 id="prerequisites-for-all-services">Prerequisites for all services</h1>
+<h2 id="adding-keys">Adding keys</h2>
+<p>When a piece of static infrastructure is initialized on OpenStack or AWS, it will only contain <em>your</em> public key at first. You'll need to add the public keys for other developers as well.</p>
+<pre><code>vi .ssh/authorized_keys
+</code></pre>
+
+<p>The CentOS account should, by default, have <code>sudo</code> privileges. </p>
+<hr />
+<h2 id="installing-the-repos">Installing the repos</h2>
+<p>On all pieces of the static infrastructure, you will need to install the VC3 package repository. Add the following contents to <code>/etc/yum.repos.d/vc3.repo</code>:</p>
+<pre><code>[vc3-x86_64]
+name=VC3 x86_64
+baseurl=http://build.virtualclusters.org/production/x86_64
+gpgcheck=0
+[vc3-noarch]
+name=VC3 noarch
+baseurl=http://build.virtualclusters.org/production/noarch
+gpgcheck=0
+</code></pre>
+
+<hr />
+<h1 id="bootstrapping-authentication-on-the-master">Bootstrapping authentication on the Master</h1>
+<h2 id="installing-credible-and-setting-up-certificates">Installing Credible and setting up certificates</h2>
+<p>Credible will be used to issue certificates to all VC3 components for authentication. We will only set it up on the Master, and then copy certificates and keys to other pieces of the infrastructure. </p>
+<p>Install credible from the repos:</p>
+<pre><code>yum install credible
+</code></pre>
+
+<p>And update <code>/etc/credible/credible.conf</code> as appropriate:</p>
+<pre><code>[credible]
+storageplugin = Memory
+vardir = /var/credible
+
+[credible-ssh]
+keytype = rsa
+bitlength = 4096
+
+[credible-ssca]
+roottemplate=/etc/credible/openssl.cnf.root.template
+intermediatetemplate=/etc/credible/openssl.cnf.intermediate.template
+vardir = /var/credible
+bitlength = 4096
+
+# Test defaults.
+sscaname = VC3
+country = US
+locality = Upton
+state = NY
+organization = BNL
+orgunit = SDCC
+email = jhover@bnl.gov
+</code></pre>
+
+<h2 id="issueing-certificates">Issueing certificates</h2>
+<p>Retrieve the CA Chain and generate a host certificate and key for the Master:</p>
+<pre><code>credible -c /etc/credible/credible.conf hostcert master-test.virtualclusters.org &gt; /etc/pki/tls/certs/hostcert.pem
+credible -c /etc/credible/credible.conf hostkey master-test.virtualclusters.org &gt; /etc/pki/tls/private/hostkey.pem
+credible -c /etc/credible/credible.conf certchain &gt; /etc/pki/ca-trust/extracted/pem/vc3-chain.cert.pem
+</code></pre>
+
+<hr />
+<h1 id="vc3-infoservice">VC3 Infoservice</h1>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>As with the Master, you will need to install the VC3 repo and any public keys. </p>
+<h2 id="installing-the-infoservice">Installing the Infoservice</h2>
+<p>Assuming you have already configured the VC3 repos, install the following:</p>
+<pre><code>yum install epel-release -y
+yum install vc3-infoservice pluginmanager python-pip openssl -y
+pip install pyOpenSSL CherryPy==11.0.0
+</code></pre>
+
+<p>And edit config at <code>/etc/vc3/vc3-infoservice.conf</code>:</p>
+<pre><code>[DEFAULT]
+loglevel = debug
+
+[netcomm]
+chainfile=/etc/pki/ca-trust/extracted/pem/vc3-chain.cert.pem
+certfile=/etc/pki/tls/certs/hostcert.pem
+keyfile=/etc/pki/tls/private/hostkey.pem
+
+sslmodule=pyopenssl
+httpport=20333
+httpsport=20334
+
+[persistence]
+plugin = DiskDump
+
+[plugin-diskdump]
+filename=/tmp/infoservice.diskdump
+</code></pre>
+
+<p>On the <em>Master</em> host, you will need to issue certificates for the Infoservice. Copy and paste into the appropriate files:</p>
+<pre><code>(master)# credible -c /etc/credible/credible.conf hostcert info-test.virtualclusters.org
+(infoservice)# vi /etc/pki/tls/certs/hostcert.pem
+(master)# credible -c /etc/credible/credible.conf hostkey info-test.virtualclusters.org
+(infoservice)# vi /etc/pki/tls/private/hostkey.pem
+(master)# credible -c /etc/credible/credible.conf certchain
+(infoservice)# /etc/pki/ca-trust/extracted/pem/vc3-chain.cert.pem
+</code></pre>
+
+<h2 id="starting-the-infoservice">Starting the Infoservice</h2>
+<p>Due to a bug (CORE-261), we need to create <code>/var/log/vc3</code></p>
+<pre><code>mkdir -p /var/log/vc3
+</code></pre>
+
+<p>For now, we'll use the sysv-init style startup scripts:</p>
+<pre><code>/etc/init.d/vc3-infoservice.init start
+</code></pre>
+
+<p>If it's running, you should see the following after <code>/etc/init.d/vc3-infoservice.init status</code>:</p>
+<pre><code>● vc3-infoservice.init.service - LSB: start and stop vc3-info-service
+   Loaded: loaded (/etc/rc.d/init.d/vc3-infoservice.init; bad; vendor preset: disabled)
+   Active: active (running) since Fri 2017-09-08 16:31:13 UTC; 36s ago
+</code></pre>
+
+<p>Check the logs for any ERROR statements:</p>
+<pre><code>grep &quot;ERROR&quot; /var/log/vc3/*log || echo &quot;Everything OK&quot;
+</code></pre>
+
+<hr />
+<h1 id="vc3-master">VC3 Master</h1>
+<h2 id="installing-the-master">Installing the Master</h2>
+<p>The Master depends on the vc3-client and vc3-infoservice packages for the client APIs. We also need ansible and the VC3 playbooks to configure nodes. Install them along with the plugin manager:</p>
+<pre><code>yum install vc3-client vc3-infoservice vc3-master pluginmanager ansible vc3-playbooks -y
+</code></pre>
+
+<p>If using OpenStack for dynamic head node provisioning, you'll also need python-novaclient from the OpenStack repositories. </p>
+<pre><code>yum install centos-release-openstack-ocata -y
+yum install python-novaclient -y
+</code></pre>
+
+<p>And configure <code>/etc/vc3/vc3-master.conf</code>:</p>
+<pre><code>[DEFAULT]
+loglevel = debug
+
+[master]
+taskconf=/etc/vc3/tasks.conf
+
+[credible]
+credconf=/etc/credible/credible.conf
+
+[dynamic]
+plugin=Execute
+
+[netcomm]
+chainfile=/etc/pki/ca-trust/extracted/pem/vc3-chain.cert.pem
+certfile=/etc/pki/tls/certs/hostcert.pem
+keyfile=/etc/pki/tls/private/hostkey.pem
+
+infohost=info-test.virtualclusters.org
+httpport=20333
+httpsport=20334
+
+[core]
+whitelist = cctools-catalog-server,vc3-factory
+</code></pre>
+
+<p>You will also need to modify the client config at <code>/etc/vc3/vc3-client.conf</code>:</p>
+<pre><code>[DEFAULT]
+logLevel = warn
+
+[netcomm]
+chainfile=/etc/pki/ca-trust/extracted/pem/vc3-chain.cert.pem
+certfile=/etc/pki/tls/certs/hostcert.pem
+keyfile=/etc/pki/tls/private/hostkey.pem
+
+infohost=info-test.virtualclusters.org
+httpport=20333
+httpsport=20334
+</code></pre>
+
+<p>Finally, configure the Master for Openstack/Ansible in <code>/etc/vc3/tasks.conf</code>:</p>
+<pre><code>[DEFAULT]
+# in seconds
+polling_interval = 120
+
+[vc3init]
+taskplugins = InitInstanceAuth,HandlePairingRequests
+
+[vcluster-lifecycle]
+# run at least once per vcluster-requestcycle
+taskplugins = InitResources,HandleAllocations
+polling_interval = 45
+
+
+[vcluster-requestcycle]
+taskplugins = HandleRequests
+polling_interval = 60
+
+[consistency-checks]
+taskplugins = CheckAllocations
+
+[access-checks]
+taskplugins = CheckResourceAccess
+polling_interval = 360
+
+
+[vcluster-headnodecycle]
+
+taskplugins = HandleHeadNodes
+polling_interval =  10
+
+username = myosuser
+password = secret
+user_domain_name    = default
+project_domain_name = default
+auth_url = http://10.32.70.9:5000/v3
+
+#CentOS 7 vanilla minimal install
+#node_image            = 730253d8-d585-43d2-b2d2-16d3af388306
+#CentOS 7 minimal install + condor,cvmfs,gcc,epel,osg-oasis
+node_image            = 093fd316-fffc-441c-944c-6ba2de582f8f 
+
+#large: 2 VCPUS 4GB RAM 10 GB Disk
+node_flavor           = 344f29c8-7370-49b4-aaf8-b1427582970f 
+#small: 1 VCPUS 2GB RAM 10 GB Disk
+#node_flavor           = 15d4a4c3-3b97-409a-91b2-4bc1226382d3
+
+node_user             = centos
+node_private_key_file = ~/.ssh/initnode
+node_public_key_name  = initnode-openstack-name
+node_security_groups  = ssh,default
+node_network_id       = 04e64bbe-d017-4aef-928b-0c2c0dd3fc9e
+
+node_prefix           = dev-
+node_max_no_contact_time = 900
+node_max_initializing_count = 3
+
+ansible_path         = /etc/vc3/vc3-playbooks/login
+ansible_playbook     = login-dynamic.yaml
+ansible_debug_file   = /var/log/vc3/ansible.log
+</code></pre>
+
+<p>Note the <em>username</em> and <em>password</em> you will need to fill in. You'll also need to put the private key for root on the head nodes here under <code>/etc/vc3/keys</code>.</p>
+<h2 id="launching-the-master">Launching the Master</h2>
+<p>Once the Infoservce has been started, you can start the VC3 Master to process requests. Make sure that the <code>infohost=</code> is pointed to the correct hostname in <code>/etc/vc3/vc3/master.conf</code>.</p>
+<p>It may be necessary to create the vc3 log directory (<em>see CORE-140</em>) and change permissions on the Credible directory (<em>see CORE-144</em>):</p>
+<pre><code>mkdir -p /var/log/vc3
+chown vc3: /var/log/vc3
+</code></pre>
+
+<p>Finally, start the service:</p>
+<pre><code>systemctl start vc3-master
+</code></pre>
+
+<p>You should see something similar to the following if things are working:</p>
+<pre><code>● vc3-master.service - VC3 Master
+   Loaded: loaded (/usr/lib/systemd/system/vc3-master.service; disabled; vendor preset: disabled)
+   Active: active (running) since Fri 2017-09-08 17:38:48 UTC; 48s ago
+ Main PID: 20031 (vc3-master)
+   CGroup: /system.slice/vc3-master.service
+           └─20031 /usr/bin/python /usr/bin/vc3-master --conf /etc/vc3/vc3-master.conf -d --log=/var/log/vc3/master.log
+ ```
+
+You can check to see if things are working with the following command:
+</code></pre>
+
+<p>grep "ERROR" /var/log/vc3/*.log || echo "Everything OK"</p>
+<pre><code>
+-------
+
+# VC3 Factory
+The VC3 factory launches, maintains, and destroys virtual clusters by sending and monitoring pilot jobs that contain the VC3 builder. 
+
+## Prerequisites
+
+As with the master and infoservice, you'll need the VC3 repo installed and public keys distributed before continuing. 
+
+## Installing the Factory
+
+In addition to the factory itself, you'll need to install VC3-specific plugins, the infoservice and client for APIs, and the pluginmanager. 
+</code></pre>
+
+<p>yum install epel-release -y 
+yum install autopyfactory vc3-factory-plugins vc3-client vc3-infoservice pluginmanager vc3-remote-manager vc3-builder python-paramiko -y</p>
+<pre><code>
+We will also need the HTCondor software. Install the public key, repo, and condor package:
+</code></pre>
+
+<p>rpm --import http://research.cs.wisc.edu/htcondor/yum/RPM-GPG-KEY-HTCondor
+curl http://research.cs.wisc.edu/htcondor/yum/repo.d/htcondor-stable-rhel7.repo &gt; /etc/yum.repos.d/htcondor-stable-rhel7.repo
+yum install condor</p>
+<pre><code>
+As before, we will need certificates issued to the Factory host:
+
+</code></pre>
+
+<p>(master)# credible -c /etc/credible/credible.conf hostcert apf-test.virtualclusters.org
+(factory)# vi /etc/pki/tls/certs/hostcert.pem
+(master)# credible -c /etc/credible/credible.conf hostkey apf-test.virtualclusters.org
+(factory)# vi /etc/pki/tls/private/hostkey.pem
+(master)# credible -c /etc/credible/credible.conf certchain
+(factory)# vi /etc/pki/ca-trust/extracted/pem/vc3-chain.cert.pem</p>
+<pre><code>
+The client will need to be configured to point at the test infoservice in `/etc/vc3/vc3-client.conf`:
+</code></pre>
+
+<p>[DEFAULT]
+logLevel = warn</p>
+<p>[netcomm]
+chainfile=/etc/pki/ca-trust/extracted/pem/vc3-chain.cert.pem
+certfile=/etc/pki/tls/certs/hostcert.pem
+keyfile=/etc/pki/tls/private/hostkey.pem</p>
+<p>infohost=info-test.virtualclusters.org
+httpport=20333
+httpsport=20334</p>
+<pre><code>
+The factory defaults for VC3, in `/etc/autopyfactory/vc3defaults.conf`, may need to be adjusted as follows:
+</code></pre>
+
+<p>[DEFAULT]
+vo = VC3
+status = online
+override = True
+enabled = True
+cleanlogs.keepdays = 7
+batchstatusplugin = Condor
+wmsstatusplugin = None
+schedplugin = KeepNRunning, MinPerCycle, MaxPerCycle, MaxPending
+sched.maxtorun.maximum = 9999
+sched.maxpending.maximum = 100
+sched.maxpercycle.maximum = 50
+sched.minpercycle.minimum = 0
+sched.keepnrunning.keep_running = 0
+monitorsection = dummy-monitor
+builder = /usr/local/libexec/vc3-builder</p>
+<p>periodic_remove = periodic_remove=(JobStatus == 5 &amp;&amp; (CurrentTime - EnteredCurrentStatus) &gt; 3600) || (JobStatus == 1 &amp;&amp; globusstatus =!= 1 &amp;&amp; (CurrentTime - EnteredCurrentStatus) &gt; 86400) || (JobStatus == 2 &amp;&amp; (CurrentTime - EnteredCurrentStatus) &gt; 604800)</p>
+<p>batchsubmit.condorosgce.proxy = None
+batchsubmit.condorec2.proxy = None
+batchsubmit.condorec2.peaceful = True
+batchsubmit.condorlocal.proxy = None
+batchsubmit.condorssh.killorder = newest
+batchsubmit.condorssh.peaceful = False</p>
+<p>apfqueue.sleep = 60
+batchstatus.condor.sleep = 25</p>
+<pre><code>
+Likewise, the main `autopyfactory.conf` needs to be adjusted:
+
+</code></pre>
+
+<h1 id="_1">=================================================================================================================</h1>
+<h1 id="_2"></h1>
+<h1 id="autopyfactoryconf-configuration-file-for-main-factory-component-of-autopyfactory">autopyfactory.conf Configuration file for main Factory component of AutoPyFactory.</h1>
+<h1 id="_3"></h1>
+<h1 id="documentation">Documentation:</h1>
+<h1 id="httpstwikigridiuedubinviewdocumentationrelease3autopyfactory">https://twiki.grid.iu.edu/bin/view/Documentation/Release3/AutoPyFactory</h1>
+<h1 id="httpstwikigridiuedubinviewdocumentationrelease3autopyfactoryconfiguration5_2_autopyfactory_conf">https://twiki.grid.iu.edu/bin/view/Documentation/Release3/AutoPyFactoryConfiguration#5_2_autopyfactory_conf</h1>
+<h1 id="_4"></h1>
+<h1 id="_5">=================================================================================================================</h1>
+<h1 id="template-for-a-configuration-file">template for a configuration file</h1>
+<p>[Factory]</p>
+<p>factoryAdminEmail = neo@matrix.net
+factoryId = MYSITE-hostname-sysadminname
+factorySMTPServer = mail.matrix.net
+factoryMinEmailRepeatSeconds = 43200
+factoryUser = autopyfactory
+enablequeues = True</p>
+<p>queueConf = file:///etc/autopyfactory/queues.conf
+queueDirConf = None
+proxyConf = /etc/autopyfactory/proxy.conf
+authmanager.enabled = True
+proxymanager.enabled = True
+proxymanager.sleep = 30
+authmanager.sleep = 30
+authConf = /etc/autopyfactory/auth.conf
+monitorConf = /etc/autopyfactory/monitor.conf
+mappingsConf = /etc/autopyfactory/mappings.conf</p>
+<p>cycles = 9999999
+cleanlogs.keepdays = 14</p>
+<p>factory.sleep=30
+wmsstatus.panda.sleep = 150
+wmsstatus.panda.maxage = 360
+wmsstatus.condor.sleep = 150
+wmsstatus.condor.maxage = 360
+batchstatus.condor.sleep = 150
+batchstatus.condor.maxage = 360</p>
+<p>baseLogDir = /home/autopyfactory/factory/logs
+baseLogDirUrl = http://myhost.matrix.net:25880</p>
+<p>logserver.enabled = True
+logserver.index = True
+logserver.allowrobots = False</p>
+<h1 id="automatic-reconfiguration">Automatic (re)configuration</h1>
+<p>config.reconfig = True
+config.reconfig.interval = 30
+config.queues.plugin = File, VC3
+config.auth.plugin = File, VC3</p>
+<p>config.queues.vc3.vc3clientconf = /etc/vc3/vc3-client.conf
+config.queues.vc3.tempfile = ~/queues.conf.tmp</p>
+<h1 id="for-static-central-factory-use-all-and-will-check-all-requests">For static central factory, use 'all' and will check all requests.</h1>
+<p>config.queues.vc3.requestname = all
+config.auth.vc3.vc3clientconf = /etc/vc3/vc3-client.conf
+config.auth.vc3.tempfile = ~/auth.conf.tmp
+config.auth.vc3.requestname = all</p>
+<h1 id="for-the-factory-level-monitor-plugin-vc3">For the factory-level monitor plugin VC3</h1>
+<p>monitor = VC3
+monitor.vc3.vc3clientconf = /etc/vc3/vc3-client.conf</p>
+<pre><code>
+## Starting the Factory and Condor
+Once the Factory, Condor, and the builder have been installed on the factory host, you'll need to start the services:
+</code></pre>
+
+<p>service condor start
+service autopyfactory start</p>
+<pre><code>
+As usual, check for any errors in the factory startup:
+</code></pre>
+
+<p>grep "ERROR" /var/log/autopyfactory/*.log || echo "Everything OK"</p>
+<pre><code>
+## Monitoring the pilots
+We use a graphite server provided by MWT2 to plot time series data. Create the monitoring script in `/usr/local/bin/monitor-pilots.sh`:
+</code></pre>
+
+<h1 id="binbash">!/bin/bash</h1>
+<p>condor_q -nobatch -global -const 'Jobstatus == 1' -long | grep "MATCH_APF" | sort | uniq -c | sed 's/\"//g' |awk -v date=$(date +%s) -v hostname=$(hostname | tr '.' '<em>') '{ print "condor.factory."hostname".idle." $4,$1,date}' | nc -w 30 graphite.mwt2.org 2003
+condor_q -nobatch -global -const 'Jobstatus == 2' -long | grep "MATCH_APF" | sort | uniq -c | sed 's/\"//g' |awk -v date=$(date +%s) -v hostname=$(hostname | tr '.' '</em>') '{ print "condor.factory."hostname".running." $4,$1,date}' | nc -w 30 graphite.mwt2.org 2003</p>
+<pre><code>
+Make it executable, install `nc` if necessary, and test for any errors:
+</code></pre>
+
+<p>chmod +x /usr/local/bin/monitor-pilots.sh
+yum install nc -y
+/usr/local/bin/monitor-pilots.sh</p>
+<pre><code>
+If successful, there should be no output. Finally add it to root's crontab (`crontab -e` as root) with the following cron entry:
+</code></pre>
+
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li>/usr/local/bin/monitor-pilots.sh</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<pre><code>
+------
+# VC3 Web Portal
+The VC3 web portal is a flask application that integrates the VC3 client APIs to give end-users a GUI for instantiating, running and terminating virtual clusters, registering resources and allocations, managing projects, and more.
+
+## Prerequisites
+For the host, you will need to install the development public keys and issue certs by the VC3 master. 
+
+All of the web portal's non-secret dependencies are included in a Docker container. However, you will need the Docker engine running, as well as a certificate issued by LetsEncrypt or another CA if you want the website to actually be visible over HTTPS without warnings.
+
+## Installing and running Docker
+You will first need to install EPEL and the Docker engine
+</code></pre>
+
+<p>yum install epel-release -y
+yum install docker -y</p>
+<pre><code>And start the service:
+</code></pre>
+
+<p>systemctl start docker 
+systemctl status docker</p>
+<pre><code>
+If it's working, you should see something like this:
+</code></pre>
+
+<p>● docker.service - Docker Application Container Engine
+   Loaded: loaded (/usr/lib/systemd/system/docker.service; disabled; vendor preset: disabled)
+   Active: active (running) since Mon 2017-09-11 19:23:18 UTC; 2s ago
+     Docs: http://docs.docker.com
+ Main PID: 16879 (dockerd-current)
+ ```</p>
+<h2 id="issuing-a-certificate-with-lets-encrypt">Issuing a certificate with Let's Encrypt</h2>
+<p>We use Certbot to issue SSL certificates that have been trusted by Let's Encrypt. First, install Cerbot:</p>
+<pre><code>yum install certbot -y
+</code></pre>
+
+<p>Next, run <code>certbot certonly</code> and go through the prompts:</p>
+<pre><code>[root@www-test ~]# certbot certonly
+Saving debug log to /var/log/letsencrypt/letsencrypt.log
+
+How would you like to authenticate with the ACME CA?
+-------------------------------------------------------------------------------
+1: Spin up a temporary webserver (standalone)
+2: Place files in webroot directory (webroot)
+-------------------------------------------------------------------------------
+Select the appropriate number [1-2] then [enter] (press 'c' to cancel): 1
+Enter email address (used for urgent renewal and security notices) (Enter 'c' to
+cancel):lincolnb@uchicago.edu
+Starting new HTTPS connection (1): acme-v01.api.letsencrypt.org
+
+-------------------------------------------------------------------------------
+Please read the Terms of Service at
+https://letsencrypt.org/documents/LE-SA-v1.1.1-August-1-2016.pdf. You must agree
+in order to register with the ACME server at
+https://acme-v01.api.letsencrypt.org/directory
+-------------------------------------------------------------------------------
+(A)gree/(C)ancel: A
+
+-------------------------------------------------------------------------------
+Would you be willing to share your email address with the Electronic Frontier
+Foundation, a founding partner of the Let's Encrypt project and the non-profit
+organization that develops Certbot? We'd like to send you email about EFF and
+our work to encrypt the web, protect its users and defend digital rights.
+-------------------------------------------------------------------------------
+(Y)es/(N)o: n
+Please enter in your domain name(s) (comma and/or space separated)  (Enter 'c'
+to cancel):www-test.virtualclusters.org
+Obtaining a new certificate
+Performing the following challenges:
+tls-sni-01 challenge for www-test.virtualclusters.org
+Waiting for verification...
+Cleaning up challenges
+
+IMPORTANT NOTES:
+ - Congratulations! Your certificate and chain have been saved at
+   /etc/letsencrypt/live/www-test.virtualclusters.org/fullchain.pem.
+   Your cert will expire on 2017-12-10. To obtain a new or tweaked
+   version of this certificate in the future, simply run certbot
+   again. To non-interactively renew *all* of your certificates, run
+   &quot;certbot renew&quot;
+ - Your account credentials have been saved in your Certbot
+   configuration directory at /etc/letsencrypt. You should make a
+   secure backup of this folder now. This configuration directory will
+   also contain certificates and private keys obtained by Certbot so
+   making regular backups of this folder is ideal.
+ - If you like Certbot, please consider supporting our work by:
+
+   Donating to ISRG / Let's Encrypt:   https://letsencrypt.org/donate
+   Donating to EFF:                    https://eff.org/donate-le
+</code></pre>
+
+<p>Take note of the fullchain location, e.g. <code>/etc/letsencrypt/live/www-test.virtualclusters.org/fullchain.pem</code>. You will need this location for the Container.</p>
+<h2 id="installing-the-web-portal">Installing the web portal</h2>
+<p>First, install git</p>
+<pre><code>yum install git -y
+</code></pre>
+
+<p>Then clone the web portal: </p>
+<pre><code>cd ~
+git clone https://github.com/vc3-project/vc3-website-python
+</code></pre>
+
+<h2 id="installing-the-secrets">Installing the secrets</h2>
+<p>You'll need 3 sets of secrets, at the following locations:
+ * <code>/root/secrets/$(hostname)/</code>
+ * <code>/root/secrets/portal.conf</code> 
+ * <code>/root/secrets/vc3/</code></p>
+<p>Docker can have unusual behavior with symbolic links, so it's best to just copy the WWW certs into place:</p>
+<pre><code>mkdir -p /root/secrets/$(hostname)
+cp -rL /etc/letsencrypt/live/$(hostname)/* /root/secrets/$(hostname)
+</code></pre>
+
+<p>The <code>portal.conf</code> should be obtained from the VC3 developers, or re-issued from Globus if necessary.</p>
+<p>For the VC3 certificates, you'll need to issue them with the Master as usual. The container expects the following filenames:
+ * <code>localhost.cert.pem</code>
+ * <code>localhost.keynopw.pem</code>
+ * <code>vc3chain.pem</code></p>
+<p>As before:</p>
+<pre><code>(master)# credible -c /etc/credible/credible.conf hostcert apf-test.virtualclusters.org
+(www)# vi /root/secrets/vc3/localhost.cert.pem
+(master)# credible -c /etc/credible/credible.conf hostkey apf-test.virtualclusters.org
+(www)# vi /root/secrets/vc3/localhost.keynopw.pem
+(master)# credible -c /etc/credible/credible.conf certchain
+(www)# vi /root/secrets/vc3/vc3chain.pem
+</code></pre>
+
+<h2 id="running-the-container">Running the container</h2>
+<p>Once you have issued your certificates, you'll need to deploy the container and mount the secrets into it at run-time. We intentionally separate secrets such that everything else can be dumped into Github.</p>
+<p>Use the following systemd file</p>
+<pre><code>[Unit]
+Description=VC3 Development Website
+After=syslog.target network.target
+
+[Service]
+Type=simple
+ExecStartPre=/usr/local/bin/update_dev_code.sh
+ExecStart=/usr/bin/docker run --rm --name vc3-portal -p 80:8080 -p 443:4443 -v /root/vc3-website/secrets/www-dev.virtualclusters.org:/etc/letsencrypt/live/virtualclusters.org -v /root/vc3-website/secrets/portal.conf:/srv/www/vc3-web-env/portal/portal.conf -v /root/vc3-website/secrets/vc3:/srv/www/vc3-web-env/etc/certs -v /root/vc3-website-python:/srv/www/vc3-web-env virtualclusters/vc3-portal:latest
+ExecReload=/usr/bin/docker restart vc3-portal
+ExecStop=/usr/bin/docker stop vc3-portal
+</code></pre>
+
+<p>Once placed in <code>/etc/systemd/system/website.service</code>, <code>systemctl start</code>, <code>systemctl stop</code>, and <code>systemctl restart</code> will do the appropriate things.</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../vc3-builder/" title="VC3 Builder" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                VC3 Builder
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../../glossary/" title="Glossary" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Glossary
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="http://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="https://github.com/vc3-project" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://twitter.com/virtualclusters" class="md-footer-social__link fa fa-twitter"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.b438e6c5.js"></script>
+      
+      <script>app.initialize({version:"0.17.3",url:{base:"../.."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>
