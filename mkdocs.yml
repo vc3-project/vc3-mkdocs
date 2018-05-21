@@ -18,11 +18,12 @@ extra:
 pages:
   - Home: index.md
   - User Guide:
-    - 'VC3 User Guide': 'userguide/vc3-user-guide.md'
-    # - 'VC3 Developers Guide': 'userguide/vc3-dev-guide.md'
-  - Developers Guide:
-    - 'VC3 Builder': 'devguide/vc3-builder.md'
-    - 'VC3 Infrastructure': 'devguide/vc3-deployment-guide.md'
+    - 'Getting Started': 'userguide/gettingstarted.md'
+  - Resource Provider Guide:
+    - 'Adding Your Resources': 'resourceguide/newresource.md'
+  - Developer Guide:
+    - 'VC3 Builder': 'devguide/builder.md'
+    - 'VC3 Infrastructure': 'devguide/deployment-guide.md'
   - Glossary: glossary.md
   # - MK Docs Cheatsheet: mkcommands.md
 markdown_extensions:
