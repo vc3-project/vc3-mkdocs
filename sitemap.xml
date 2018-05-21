@@ -12,7 +12,7 @@
     
         
     <url>
-     <loc>https://vc3-project.github.io/vc3-mkdocs//userguide/vc3-user-guide/</loc>
+     <loc>https://vc3-project.github.io/vc3-mkdocs//userguide/gettingstarted/</loc>
      <lastmod>2018-05-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -22,13 +22,23 @@
     
         
     <url>
-     <loc>https://vc3-project.github.io/vc3-mkdocs//devguide/vc3-builder/</loc>
+     <loc>https://vc3-project.github.io/vc3-mkdocs//resourceguide/newresource/</loc>
+     <lastmod>2018-05-21</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>https://vc3-project.github.io/vc3-mkdocs//devguide/builder/</loc>
      <lastmod>2018-05-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://vc3-project.github.io/vc3-mkdocs//devguide/vc3-deployment-guide/</loc>
+     <loc>https://vc3-project.github.io/vc3-mkdocs//devguide/deployment-guide/</loc>
      <lastmod>2018-05-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
