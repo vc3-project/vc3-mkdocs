@@ -185,7 +185,7 @@ Please, look into the [resources page](https://www.virtualclusters.org/resource)
 resource you are planning to use with this environment has container options available in the 
 "features" section (E.g: singularity).
 
-![step8](../img/15_env1.png)
+![step8](../img/18_vc_env.png)
 
 Once done, click on the "Create New Enviroment" button.
 You should be returned to the Enviroments page, where you will be able to see all of your environments.
