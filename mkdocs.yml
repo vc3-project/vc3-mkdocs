@@ -22,7 +22,7 @@ pages:
     # - 'VC3 Developers Guide': 'userguide/vc3-dev-guide.md'
   - Developers Guide:
     - 'VC3 Builder': 'devguide/vc3-builder.md'
-    - 'VC3 Infrastructure': 'devguide/vc3-deployment.md'
+    - 'VC3 Infrastructure': 'devguide/vc3-deployment-guide.md'
   - Glossary: glossary.md
   # - MK Docs Cheatsheet: mkcommands.md
 markdown_extensions:
