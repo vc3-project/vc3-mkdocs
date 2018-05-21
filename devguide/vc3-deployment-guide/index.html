@@ -438,34 +438,7 @@
                   <a href="https://github.com/vc3-project/vc3-mkdocs/edit/master/docs/devguide/vc3-deployment-guide.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <ul>
-<li><a href="#prerequisites-for-all-services">Prerequisites for all services</a></li>
-<li><a href="#adding-keys">Adding keys</a></li>
-<li><a href="#installing-the-repos">Installing the repos</a></li>
-<li><a href="#bootstrapping-authentication-on-the-master">Bootstrapping authentication on the Master</a></li>
-<li><a href="#installing-credible-and-setting-up-certificates">Installing Credible and setting up certificates</a></li>
-<li><a href="#issueing-certificates">Issueing certificates</a></li>
-<li><a href="#vc3-infoservice">VC3 Infoservice</a></li>
-<li><a href="#prerequisites">Prerequisites</a></li>
-<li><a href="#installing-the-infoservice">Installing the Infoservice</a></li>
-<li><a href="#starting-the-infoservice">Starting the Infoservice</a></li>
-<li><a href="#vc3-master">VC3 Master</a></li>
-<li><a href="#installing-the-master">Installing the Master</a></li>
-<li><a href="#launching-the-master">Launching the Master</a></li>
-<li><a href="#vc3-factory">VC3 Factory</a></li>
-<li><a href="#prerequisites-1">Prerequisites</a></li>
-<li><a href="#installing-the-factory">Installing the Factory</a></li>
-<li><a href="#starting-the-factory-and-condor">Starting the Factory and Condor</a></li>
-<li><a href="#monitoring-the-pilots">Monitoring the pilots</a></li>
-<li><a href="#vc3-web-portal">VC3 Web Portal</a></li>
-<li><a href="#prerequisites-2">Prerequisites</a></li>
-<li><a href="#installing-and-running-docker">Installing and running Docker</a></li>
-<li><a href="#issuing-a-certificate-with-let-s-encrypt">Issuing a certificate with Let's Encrypt</a></li>
-<li><a href="#installing-the-web-portal">Installing the web portal</a></li>
-<li><a href="#installing-the-secrets">Installing the secrets</a></li>
-<li><a href="#running-the-container">Running the container</a></li>
-</ul>
-<h1 id="prerequisites-for-all-services">Prerequisites for all services</h1>
+                <h1 id="prerequisites-for-all-services">Prerequisites for all services</h1>
 <h2 id="adding-keys">Adding keys</h2>
 <p>When a piece of static infrastructure is initialized on OpenStack or AWS, it will only contain <em>your</em> public key at first. You'll need to add the public keys for other developers as well.</p>
 <pre><code>vi .ssh/authorized_keys
@@ -711,12 +684,9 @@ chown vc3: /var/log/vc3
 </code></pre>
 
 <p>You should see something similar to the following if things are working:</p>
-<pre><code>● vc3-master.service - VC3 Master
+<pre><code>vc3-master.service - VC3 Master
    Loaded: loaded (/usr/lib/systemd/system/vc3-master.service; disabled; vendor preset: disabled)
    Active: active (running) since Fri 2017-09-08 17:38:48 UTC; 48s ago
- Main PID: 20031 (vc3-master)
-   CGroup: /system.slice/vc3-master.service
-           └─20031 /usr/bin/python /usr/bin/vc3-master --conf /etc/vc3/vc3-master.conf -d --log=/var/log/vc3/master.log
  ```
 
 You can check to see if things are working with the following command:
