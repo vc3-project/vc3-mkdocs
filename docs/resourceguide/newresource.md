@@ -1,2 +1,3 @@
 # Adding a resource to VC3
-If you'd like your resource to be added as a VC3 target, please fill out the form here: [VC3 New Resource Form](http://bit.ly/vc3-new-resource).
+
+The VC3 project (http://www.virtualclusters.org) is searching for HPC resources to evaluate its closed-beta release.  If you would like to add an HPC resource to the VC3 platform for testing, please complete this [form](http://bit.ly/vc3-signup). You do not necessarily need to have an institutional affiliation with the HPC resource organization, but should have an allocation to run jobs there.  (The VC3 user closed beta invitation signup is [here](http://bit.ly/vc3-signup).
