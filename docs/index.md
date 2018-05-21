@@ -1,6 +1,6 @@
 # Welcome to VC3 Documentation
 
-For portal access visit [virtualclusters.org](http://virtualclusters.org).
+For portal access visit [virtualclusters.org](https://www.virtualclusters.org).
 
 ## Getting Started With VC3
 
@@ -10,7 +10,7 @@ cluster frameworks to make disparate resources appear as a single “virtual”
 resource for collaborative science.
 
 
-## [VC3 User Guide](userguide/vc3-user-guide.md)
+## [VC3 User Guide](userguide/gettingstarted.md)
 
 All users of VC3 should read this portion of the documentation. This provides examples and documentation around VC3’s assortment of options and how to specify them on the portal.
 
