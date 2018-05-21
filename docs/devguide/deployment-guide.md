@@ -1,29 +1,3 @@
-- [Prerequisites for all services](#prerequisites-for-all-services)
-  * [Adding keys](#adding-keys)
-  * [Installing the repos](#installing-the-repos)
-- [Bootstrapping authentication on the Master](#bootstrapping-authentication-on-the-master)
-  * [Installing Credible and setting up certificates](#installing-credible-and-setting-up-certificates)
-  * [Issueing certificates](#issueing-certificates)
-- [VC3 Infoservice](#vc3-infoservice)
-  * [Prerequisites](#prerequisites)
-  * [Installing the Infoservice](#installing-the-infoservice)
-  * [Starting the Infoservice](#starting-the-infoservice)
-- [VC3 Master](#vc3-master)
-  * [Installing the Master](#installing-the-master)
-  * [Launching the Master](#launching-the-master)
-- [VC3 Factory](#vc3-factory)
-  * [Prerequisites](#prerequisites-1)
-  * [Installing the Factory](#installing-the-factory)
-  * [Starting the Factory and Condor](#starting-the-factory-and-condor)
-  * [Monitoring the pilots](#monitoring-the-pilots)
-- [VC3 Web Portal](#vc3-web-portal)
-  * [Prerequisites](#prerequisites-2)
-  * [Installing and running Docker](#installing-and-running-docker)
-  * [Issuing a certificate with Let's Encrypt](#issuing-a-certificate-with-let-s-encrypt)
-  * [Installing the web portal](#installing-the-web-portal)
-  * [Installing the secrets](#installing-the-secrets)
-  * [Running the container](#running-the-container)
-
 # Prerequisites for all services 
 
 ## Adding keys
@@ -310,12 +284,9 @@ systemctl start vc3-master
 
 You should see something similar to the following if things are working:
 ```
-● vc3-master.service - VC3 Master
+vc3-master.service - VC3 Master
    Loaded: loaded (/usr/lib/systemd/system/vc3-master.service; disabled; vendor preset: disabled)
    Active: active (running) since Fri 2017-09-08 17:38:48 UTC; 48s ago
- Main PID: 20031 (vc3-master)
-   CGroup: /system.slice/vc3-master.service
-           └─20031 /usr/bin/python /usr/bin/vc3-master --conf /etc/vc3/vc3-master.conf -d --log=/var/log/vc3/master.log
  ```
 
 You can check to see if things are working with the following command:
