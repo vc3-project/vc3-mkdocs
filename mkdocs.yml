@@ -13,8 +13,6 @@ extra:
       link: 'https://github.com/vc3-project'
     - type: 'twitter'
       link: 'https://twitter.com/virtualclusters'
-    - type: 'linkedin'
-      link: 'https://linkedin.com/in/squidfunk'
 # extra_css:
 #   - 'css/extra.css'
 pages:
