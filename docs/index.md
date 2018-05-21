@@ -1,6 +1,6 @@
 # Welcome to VC3 Documentation
 
-For portal access visit [virtualclusters.org](https://www.virtualclusters.org).
+For portal access visit [https://www.virtualclusters.org](https://www.virtualclusters.org).
 
 ## Getting Started With VC3
 
