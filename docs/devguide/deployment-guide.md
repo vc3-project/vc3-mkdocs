@@ -508,7 +508,7 @@ If it's working, you should see something like this:
    Active: active (running) since Mon 2017-09-11 19:23:18 UTC; 2s ago
      Docs: http://docs.docker.com
  Main PID: 16879 (dockerd-current)
- ```
+```
 
 ### Issuing a certificate with Let's Encrypt
 We use Certbot to issue SSL certificates that have been trusted by Let's Encrypt. First, install Cerbot:
