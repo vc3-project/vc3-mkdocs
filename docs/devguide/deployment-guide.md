@@ -1,6 +1,6 @@
-# Prerequisites for all services 
+## Prerequisites for all services 
 
-## Adding keys
+### Adding keys
 
 When a piece of static infrastructure is initialized on OpenStack or AWS, it will only contain *your* public key at first. You'll need to add the public keys for other developers as well.
 
@@ -12,7 +12,7 @@ The CentOS account should, by default, have `sudo` privileges.
 
 ----
 
-## Installing the repos
+### Installing the repos
 
 On all pieces of the static infrastructure, you will need to install the VC3 package repository. Add the following contents to `/etc/yum.repos.d/vc3.repo`:
 
@@ -29,8 +29,8 @@ gpgcheck=0
 
 ----
 
-# Bootstrapping authentication on the Master
-## Installing Credible and setting up certificates
+## Bootstrapping authentication on the Master
+### Installing Credible and setting up certificates
 Credible will be used to issue certificates to all VC3 components for authentication. We will only set it up on the Master, and then copy certificates and keys to other pieces of the infrastructure. 
 
 Install credible from the repos:
@@ -65,7 +65,7 @@ orgunit = SDCC
 email = jhover@bnl.gov
 ```
 
-## Issueing certificates
+### Issuing certificates
 Retrieve the CA Chain and generate a host certificate and key for the Master:
 
 ```
@@ -76,11 +76,11 @@ credible -c /etc/credible/credible.conf certchain > /etc/pki/ca-trust/extracted/
 
 ----
 
-# VC3 Infoservice
-## Prerequisites
+## VC3 Infoservice
+### Prerequisites
 As with the Master, you will need to install the VC3 repo and any public keys. 
 
-## Installing the Infoservice
+### Installing the Infoservice
 
 Assuming you have already configured the VC3 repos, install the following:
 ```
@@ -121,7 +121,7 @@ On the *Master* host, you will need to issue certificates for the Infoservice. C
 (infoservice)# /etc/pki/ca-trust/extracted/pem/vc3-chain.cert.pem
 ```
 
-## Starting the Infoservice
+### Starting the Infoservice
 Due to a bug (CORE-261), we need to create `/var/log/vc3`
 ```
 mkdir -p /var/log/vc3
@@ -145,9 +145,9 @@ grep "ERROR" /var/log/vc3/*log || echo "Everything OK"
 ```
 
 ------
-# VC3 Master
+## VC3 Master
 
-## Installing the Master
+### Installing the Master
 The Master depends on the vc3-client and vc3-infoservice packages for the client APIs. We also need ansible and the VC3 playbooks to configure nodes. Install them along with the plugin manager:
 ```
 yum install vc3-client vc3-infoservice vc3-master pluginmanager ansible vc3-playbooks -y
@@ -267,7 +267,7 @@ ansible_debug_file   = /var/log/vc3/ansible.log
 Note the *username* and *password* you will need to fill in. You'll also need to put the private key for root on the head nodes here under `/etc/vc3/keys`.
 
 
-## Launching the Master 
+### Launching the Master 
 
 Once the Infoservce has been started, you can start the VC3 Master to process requests. Make sure that the `infohost=` is pointed to the correct hostname in `/etc/vc3/vc3/master.conf`.
 
@@ -287,7 +287,7 @@ You should see something similar to the following if things are working:
 vc3-master.service - VC3 Master
    Loaded: loaded (/usr/lib/systemd/system/vc3-master.service; disabled; vendor preset: disabled)
    Active: active (running) since Fri 2017-09-08 17:38:48 UTC; 48s ago
- ```
+```
 
 You can check to see if things are working with the following command:
 ```
@@ -296,14 +296,14 @@ grep "ERROR" /var/log/vc3/*.log || echo "Everything OK"
 
 -------
 
-# VC3 Factory
+## VC3 Factory
 The VC3 factory launches, maintains, and destroys virtual clusters by sending and monitoring pilot jobs that contain the VC3 builder. 
 
-## Prerequisites
+### Prerequisites
 
 As with the master and infoservice, you'll need the VC3 repo installed and public keys distributed before continuing. 
 
-## Installing the Factory
+### Installing the Factory
 
 In addition to the factory itself, you'll need to install VC3-specific plugins, the infoservice and client for APIs, and the pluginmanager. 
 ```
@@ -448,7 +448,7 @@ monitor = VC3
 monitor.vc3.vc3clientconf = /etc/vc3/vc3-client.conf
 ```
 
-## Starting the Factory and Condor
+### Starting the Factory and Condor
 Once the Factory, Condor, and the builder have been installed on the factory host, you'll need to start the services:
 ```
 service condor start
@@ -460,7 +460,7 @@ As usual, check for any errors in the factory startup:
 grep "ERROR" /var/log/autopyfactory/*.log || echo "Everything OK"
 ```
 
-## Monitoring the pilots
+### Monitoring the pilots
 We use a graphite server provided by MWT2 to plot time series data. Create the monitoring script in `/usr/local/bin/monitor-pilots.sh`:
 ```
 #!/bin/bash
@@ -481,15 +481,15 @@ If successful, there should be no output. Finally add it to root's crontab (`cro
 ```
 
 ------
-# VC3 Web Portal
+## VC3 Web Portal
 The VC3 web portal is a flask application that integrates the VC3 client APIs to give end-users a GUI for instantiating, running and terminating virtual clusters, registering resources and allocations, managing projects, and more.
 
-## Prerequisites
+### Prerequisites
 For the host, you will need to install the development public keys and issue certs by the VC3 master. 
 
 All of the web portal's non-secret dependencies are included in a Docker container. However, you will need the Docker engine running, as well as a certificate issued by LetsEncrypt or another CA if you want the website to actually be visible over HTTPS without warnings.
 
-## Installing and running Docker
+### Installing and running Docker
 You will first need to install EPEL and the Docker engine
 ```
 yum install epel-release -y
@@ -510,7 +510,7 @@ If it's working, you should see something like this:
  Main PID: 16879 (dockerd-current)
  ```
 
-## Issuing a certificate with Let's Encrypt
+### Issuing a certificate with Let's Encrypt
 We use Certbot to issue SSL certificates that have been trusted by Let's Encrypt. First, install Cerbot:
 ```
 yum install certbot -y
@@ -574,7 +574,7 @@ IMPORTANT NOTES:
 
 Take note of the fullchain location, e.g. `/etc/letsencrypt/live/www-test.virtualclusters.org/fullchain.pem`. You will need this location for the Container.
 
-## Installing the web portal
+### Installing the web portal
 First, install git
 ```
 yum install git -y
@@ -586,7 +586,7 @@ cd ~
 git clone https://github.com/vc3-project/vc3-website-python
 ```
 
-## Installing the secrets
+### Installing the secrets
 You'll need 3 sets of secrets, at the following locations:
  * `/root/secrets/$(hostname)/`
  * `/root/secrets/portal.conf` 
@@ -617,7 +617,7 @@ As before:
 (www)# vi /root/secrets/vc3/vc3chain.pem
 ```
 
-## Running the container
+### Running the container
 Once you have issued your certificates, you'll need to deploy the container and mount the secrets into it at run-time. We intentionally separate secrets such that everything else can be dumped into Github.
 
 Use the following systemd file
