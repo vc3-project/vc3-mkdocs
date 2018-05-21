@@ -9,11 +9,13 @@ scoop up the changes, run 'mkdocs build...' and so on, and then push
 the compiled pages back to Github in the gh-pages branch, which then
 creates the docs website.
 
+```
 So, in short:
    git clone .. /     git pull origin
    git checkout master
    <your changes, git add/commit etc>
    git push origin master
+```
 
 Jenkins should do the rest..
 
