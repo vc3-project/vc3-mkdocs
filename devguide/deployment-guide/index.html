@@ -553,15 +553,36 @@
   
 </li>
         
-      </ul>
-    </nav>
+          <li class="md-nav__item">
+  <a href="#issuing-a-certificate-with-lets-encrypt" title="Issuing a certificate with Let's Encrypt" class="md-nav__link">
+    Issuing a certificate with Let's Encrypt
+  </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#how-would-you-like-to-authenticate-with-the-acme-ca" title="How would you like to authenticate with the ACME CA?" class="md-nav__link">
-    How would you like to authenticate with the ACME CA?
+        
+          <li class="md-nav__item">
+  <a href="#installing-the-web-portal" title="Installing the web portal" class="md-nav__link">
+    Installing the web portal
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-the-secrets" title="Installing the secrets" class="md-nav__link">
+    Installing the secrets
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-the-container" title="Running the container" class="md-nav__link">
+    Running the container
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -789,15 +810,36 @@
   
 </li>
         
-      </ul>
-    </nav>
+          <li class="md-nav__item">
+  <a href="#issuing-a-certificate-with-lets-encrypt" title="Issuing a certificate with Let's Encrypt" class="md-nav__link">
+    Issuing a certificate with Let's Encrypt
+  </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#how-would-you-like-to-authenticate-with-the-acme-ca" title="How would you like to authenticate with the ACME CA?" class="md-nav__link">
-    How would you like to authenticate with the ACME CA?
+        
+          <li class="md-nav__item">
+  <a href="#installing-the-web-portal" title="Installing the web portal" class="md-nav__link">
+    Installing the web portal
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-the-secrets" title="Installing the secrets" class="md-nav__link">
+    Installing the secrets
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-the-container" title="Running the container" class="md-nav__link">
+    Running the container
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1268,125 +1310,118 @@ systemctl status docker
    Active: active (running) since Mon 2017-09-11 19:23:18 UTC; 2s ago
      Docs: http://docs.docker.com
  Main PID: 16879 (dockerd-current)
- ```
-
-### Issuing a certificate with Let's Encrypt
-We use Certbot to issue SSL certificates that have been trusted by Let's Encrypt. First, install Cerbot:
 </code></pre>
 
-<p>yum install certbot -y</p>
-<pre><code>
-Next, run `certbot certonly` and go through the prompts:
+<h3 id="issuing-a-certificate-with-lets-encrypt">Issuing a certificate with Let's Encrypt</h3>
+<p>We use Certbot to issue SSL certificates that have been trusted by Let's Encrypt. First, install Cerbot:</p>
+<pre><code>yum install certbot -y
 </code></pre>
 
-<p>[root@www-test ~]# certbot certonly
-Saving debug log to /var/log/letsencrypt/letsencrypt.log</p>
-<h2 id="how-would-you-like-to-authenticate-with-the-acme-ca">How would you like to authenticate with the ACME CA?</h2>
-<p>1: Spin up a temporary webserver (standalone)
-2: Place files in webroot directory (webroot)</p>
-<hr />
-<p>Select the appropriate number [1-2] then [enter] (press 'c' to cancel): 1
+<p>Next, run <code>certbot certonly</code> and go through the prompts:</p>
+<pre><code>[root@www-test ~]# certbot certonly
+Saving debug log to /var/log/letsencrypt/letsencrypt.log
+
+How would you like to authenticate with the ACME CA?
+-------------------------------------------------------------------------------
+1: Spin up a temporary webserver (standalone)
+2: Place files in webroot directory (webroot)
+-------------------------------------------------------------------------------
+Select the appropriate number [1-2] then [enter] (press 'c' to cancel): 1
 Enter email address (used for urgent renewal and security notices) (Enter 'c' to
 cancel):lincolnb@uchicago.edu
-Starting new HTTPS connection (1): acme-v01.api.letsencrypt.org</p>
-<hr />
-<p>Please read the Terms of Service at
+Starting new HTTPS connection (1): acme-v01.api.letsencrypt.org
+
+-------------------------------------------------------------------------------
+Please read the Terms of Service at
 https://letsencrypt.org/documents/LE-SA-v1.1.1-August-1-2016.pdf. You must agree
 in order to register with the ACME server at
-https://acme-v01.api.letsencrypt.org/directory</p>
-<hr />
-<p>(A)gree/(C)ancel: A</p>
-<hr />
-<p>Would you be willing to share your email address with the Electronic Frontier
+https://acme-v01.api.letsencrypt.org/directory
+-------------------------------------------------------------------------------
+(A)gree/(C)ancel: A
+
+-------------------------------------------------------------------------------
+Would you be willing to share your email address with the Electronic Frontier
 Foundation, a founding partner of the Let's Encrypt project and the non-profit
 organization that develops Certbot? We'd like to send you email about EFF and
-our work to encrypt the web, protect its users and defend digital rights.</p>
-<hr />
-<p>(Y)es/(N)o: n
+our work to encrypt the web, protect its users and defend digital rights.
+-------------------------------------------------------------------------------
+(Y)es/(N)o: n
 Please enter in your domain name(s) (comma and/or space separated)  (Enter 'c'
 to cancel):www-test.virtualclusters.org
 Obtaining a new certificate
 Performing the following challenges:
 tls-sni-01 challenge for www-test.virtualclusters.org
 Waiting for verification...
-Cleaning up challenges</p>
-<p>IMPORTANT NOTES:
+Cleaning up challenges
+
+IMPORTANT NOTES:
  - Congratulations! Your certificate and chain have been saved at
    /etc/letsencrypt/live/www-test.virtualclusters.org/fullchain.pem.
    Your cert will expire on 2017-12-10. To obtain a new or tweaked
    version of this certificate in the future, simply run certbot
-   again. To non-interactively renew <em>all</em> of your certificates, run
-   "certbot renew"
+   again. To non-interactively renew *all* of your certificates, run
+   &quot;certbot renew&quot;
  - Your account credentials have been saved in your Certbot
    configuration directory at /etc/letsencrypt. You should make a
    secure backup of this folder now. This configuration directory will
    also contain certificates and private keys obtained by Certbot so
    making regular backups of this folder is ideal.
- - If you like Certbot, please consider supporting our work by:</p>
-<p>Donating to ISRG / Let's Encrypt:   https://letsencrypt.org/donate
-   Donating to EFF:                    https://eff.org/donate-le</p>
-<pre><code>
-Take note of the fullchain location, e.g. `/etc/letsencrypt/live/www-test.virtualclusters.org/fullchain.pem`. You will need this location for the Container.
+ - If you like Certbot, please consider supporting our work by:
 
-### Installing the web portal
-First, install git
+   Donating to ISRG / Let's Encrypt:   https://letsencrypt.org/donate
+   Donating to EFF:                    https://eff.org/donate-le
 </code></pre>
 
-<p>yum install git -y</p>
-<pre><code>
-Then clone the web portal: 
+<p>Take note of the fullchain location, e.g. <code>/etc/letsencrypt/live/www-test.virtualclusters.org/fullchain.pem</code>. You will need this location for the Container.</p>
+<h3 id="installing-the-web-portal">Installing the web portal</h3>
+<p>First, install git</p>
+<pre><code>yum install git -y
 </code></pre>
 
-<p>cd ~
-git clone https://github.com/vc3-project/vc3-website-python</p>
-<pre><code>
-### Installing the secrets
-You'll need 3 sets of secrets, at the following locations:
- * `/root/secrets/$(hostname)/`
- * `/root/secrets/portal.conf` 
- * `/root/secrets/vc3/`
-
-Docker can have unusual behavior with symbolic links, so it's best to just copy the WWW certs into place:
-
+<p>Then clone the web portal: </p>
+<pre><code>cd ~
+git clone https://github.com/vc3-project/vc3-website-python
 </code></pre>
 
-<p>mkdir -p /root/secrets/$(hostname)
-cp -rL /etc/letsencrypt/live/$(hostname)/* /root/secrets/$(hostname)</p>
-<pre><code>
-The `portal.conf` should be obtained from the VC3 developers, or re-issued from Globus if necessary.
-
-For the VC3 certificates, you'll need to issue them with the Master as usual. The container expects the following filenames:
- * `localhost.cert.pem`
- * `localhost.keynopw.pem`
- * `vc3chain.pem`
-
-As before:
-
+<h3 id="installing-the-secrets">Installing the secrets</h3>
+<p>You'll need 3 sets of secrets, at the following locations:
+ * <code>/root/secrets/$(hostname)/</code>
+ * <code>/root/secrets/portal.conf</code> 
+ * <code>/root/secrets/vc3/</code></p>
+<p>Docker can have unusual behavior with symbolic links, so it's best to just copy the WWW certs into place:</p>
+<pre><code>mkdir -p /root/secrets/$(hostname)
+cp -rL /etc/letsencrypt/live/$(hostname)/* /root/secrets/$(hostname)
 </code></pre>
 
-<p>(master)# credible -c /etc/credible/credible.conf hostcert apf-test.virtualclusters.org
+<p>The <code>portal.conf</code> should be obtained from the VC3 developers, or re-issued from Globus if necessary.</p>
+<p>For the VC3 certificates, you'll need to issue them with the Master as usual. The container expects the following filenames:
+ * <code>localhost.cert.pem</code>
+ * <code>localhost.keynopw.pem</code>
+ * <code>vc3chain.pem</code></p>
+<p>As before:</p>
+<pre><code>(master)# credible -c /etc/credible/credible.conf hostcert apf-test.virtualclusters.org
 (www)# vi /root/secrets/vc3/localhost.cert.pem
 (master)# credible -c /etc/credible/credible.conf hostkey apf-test.virtualclusters.org
 (www)# vi /root/secrets/vc3/localhost.keynopw.pem
 (master)# credible -c /etc/credible/credible.conf certchain
-(www)# vi /root/secrets/vc3/vc3chain.pem</p>
-<pre><code>
-### Running the container
-Once you have issued your certificates, you'll need to deploy the container and mount the secrets into it at run-time. We intentionally separate secrets such that everything else can be dumped into Github.
-
-Use the following systemd file
+(www)# vi /root/secrets/vc3/vc3chain.pem
 </code></pre>
 
-<p>[Unit]
+<h3 id="running-the-container">Running the container</h3>
+<p>Once you have issued your certificates, you'll need to deploy the container and mount the secrets into it at run-time. We intentionally separate secrets such that everything else can be dumped into Github.</p>
+<p>Use the following systemd file</p>
+<pre><code>[Unit]
 Description=VC3 Development Website
-After=syslog.target network.target</p>
-<p>[Service]
+After=syslog.target network.target
+
+[Service]
 Type=simple
 ExecStartPre=/usr/local/bin/update_dev_code.sh
 ExecStart=/usr/bin/docker run --rm --name vc3-portal -p 80:8080 -p 443:4443 -v /root/vc3-website/secrets/www-dev.virtualclusters.org:/etc/letsencrypt/live/virtualclusters.org -v /root/vc3-website/secrets/portal.conf:/srv/www/vc3-web-env/portal/portal.conf -v /root/vc3-website/secrets/vc3:/srv/www/vc3-web-env/etc/certs -v /root/vc3-website-python:/srv/www/vc3-web-env virtualclusters/vc3-portal:latest
 ExecReload=/usr/bin/docker restart vc3-portal
 ExecStop=/usr/bin/docker stop vc3-portal
-```</p>
+</code></pre>
+
 <p>Once placed in <code>/etc/systemd/system/website.service</code>, <code>systemctl start</code>, <code>systemctl stop</code>, and <code>systemctl restart</code> will do the appropriate things.</p>
                 
                   
