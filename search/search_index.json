@@ -97,13 +97,18 @@
         }, 
         {
             "location": "/resourceguide/newresource/", 
-            "text": "Adding a resource to VC3\n\n\nThe \nVC3 project\n is searching for HPC resources to evaluate its closed-beta release.  If you would like to add an HPC resource to the VC3 platform for testing, please complete this \nform\n. You do not necessarily need to have an institutional affiliation with the HPC resource organization, but should have an allocation to run jobs there.  The VC3 user closed beta invitation signup is \nhere\n.", 
+            "text": "Adding a resource to VC3\n\n\nThe \nVC3 project\n is searching for HPC resources to evaluate its closed-beta release.  If you would like to add an HPC resource to the VC3 platform for testing, please complete this \nform\n. You do not necessarily need to have an institutional affiliation with the HPC resource organization, but should have an allocation to run jobs there.  The VC3 user closed beta invitation signup is \nhere\n.\n\n\nRequirements\n\n\n\n\nComptute nodes must have outbound IP connectivity.\n\n\nThe login node of the resource must be reachable via ssh and not require MFA.", 
             "title": "Adding Your Resources"
         }, 
         {
             "location": "/resourceguide/newresource/#adding-a-resource-to-vc3", 
             "text": "The  VC3 project  is searching for HPC resources to evaluate its closed-beta release.  If you would like to add an HPC resource to the VC3 platform for testing, please complete this  form . You do not necessarily need to have an institutional affiliation with the HPC resource organization, but should have an allocation to run jobs there.  The VC3 user closed beta invitation signup is  here .", 
             "title": "Adding a resource to VC3"
+        }, 
+        {
+            "location": "/resourceguide/newresource/#requirements", 
+            "text": "Comptute nodes must have outbound IP connectivity.  The login node of the resource must be reachable via ssh and not require MFA.", 
+            "title": "Requirements"
         }, 
         {
             "location": "/devguide/builder/", 
