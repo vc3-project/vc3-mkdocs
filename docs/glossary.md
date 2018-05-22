@@ -1,6 +1,47 @@
 # Glossary of Terms Used in VC3 Documentation
 
-## **Internal**
+
+## **Portal Users**
+
+### Allocation
+* An Allocation refers to an User and a Resource Each Allocation must be owned by an User. Allocations are divisible/fractionable, and can be given to Projects. Allocations may not be oversubscribed. But unbounded Allocations may be parents of multiple unbounded SubAllocations. Bounded Allocations cannot spawn unbounded SubAllocations. If a Resource grants hard allocation and allows backfill mode, those are two distinct Allocations (one hard and one unbounded)
+
+### Authentication
+* The current mechanism for users to sign-up and create accounts into the VC3 project is by authenticating themselves with their GlobusID account.
+
+### MFA
+* multi-factor authentication
+
+### Project
+* a collection of “Allocations”. It has at least 1 “user owner”, and 0 or more non-owner members. The owner is also a member.
+
+### Request
+* Entity that encapsulates all information that defines a particular virtual cluster. Creating a new Request triggers creation of the cluster.
+
+### Request templates
+* a list of pre-existing forms to be used as base for new cluster requests creation.
+
+### Resource
+* Any target on which a vc3-builder will run to provide computing power to a virtual cluster.
+
+### Resource profiles
+* a list of pre-existing forms to be used as base for new resource definition.
+
+### Service unit
+* Service units are essentially just walltime hours, with minimum charges based on minimum cores or minimum nodes per job. Much like HEPSPEC, the SUs can be normalized/converted based on LINPACK benchmarks. Doc from XSEDE: https://portal.xsede.org/knowledge-base/-/kb/document/bazo
+
+* For storage, possibly with multiple allocations per user, examples are scratch disk vs long term storage.
+
+* Exotic devices like GPUs may or may not be accounted for, depending on the resource.
+
+### Sub-Allocation
+* A SubAllocation can be defined in terms of fraction or units (cpuhours?, $dollars, HEPSPEC) or be unbounded. SubAllocations are children of an Allocation.
+
+### User
+* Every User has 0 or more Allocations. Users are owners or members of one or more projects. A User in a project can make Request(s) utilizing project member’s Allocations
+
+
+## **Project Developers**
 
 ### cluster states
   List of each possible state of a cluster throughout its lifecycle:
@@ -64,41 +105,3 @@
 ### vc3-resource-tool
 * The vc3-resource-tool is a utility to be run by end users on resource targets in order to pair and enable them for usage by the VC3 system.
 
-## **External**
-
-### Allocation
-* An Allocation refers to an User and a Resource Each Allocation must be owned by an User. Allocations are divisible/fractionable, and can be given to Projects. Allocations may not be oversubscribed. But unbounded Allocations may be parents of multiple unbounded SubAllocations. Bounded Allocations cannot spawn unbounded SubAllocations. If a Resource grants hard allocation and allows backfill mode, those are two distinct Allocations (one hard and one unbounded)
-
-### Authentication
-* The current mechanism for users to sign-up and create accounts into the VC3 project is by authenticating themselves with their GlobusID account.
-
-### MFA
-* multi-factor authentication
-
-### Project
-* a collection of “Allocations”. It has at least 1 “user owner”, and 0 or more non-owner members. The owner is also a member.
-
-### Request
-* Entity that encapsulates all information that defines a particular virtual cluster. Creating a new Request triggers creation of the cluster.
-
-### Request templates
-* a list of pre-existing forms to be used as base for new cluster requests creation.
-
-### Resource
-* Any target on which a vc3-builder will run to provide computing power to a virtual cluster.
-
-### Resource profiles
-* a list of pre-existing forms to be used as base for new resource definition.
-
-### Service unit
-* Service units are essentially just walltime hours, with minimum charges based on minimum cores or minimum nodes per job. Much like HEPSPEC, the SUs can be normalized/converted based on LINPACK benchmarks. Doc from XSEDE: https://portal.xsede.org/knowledge-base/-/kb/document/bazo
-
-* For storage, possibly with multiple allocations per user, examples are scratch disk vs long term storage.
-
-* Exotic devices like GPUs may or may not be accounted for, depending on the resource.
-
-### Sub-Allocation
-* A SubAllocation can be defined in terms of fraction or units (cpuhours?, $dollars, HEPSPEC) or be unbounded. SubAllocations are children of an Allocation.
-
-### User
-* Every User has 0 or more Allocations. Users are owners or members of one or more projects. A User in a project can make Request(s) utilizing project member’s Allocations
