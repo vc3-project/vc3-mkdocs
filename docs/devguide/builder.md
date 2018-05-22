@@ -639,7 +639,7 @@ computational node. It is useful when the recipe takes very little time
 compared to scheduling it for parallel execution.
 
 
-### ADDING RECIPES TO THE vc3-builder EXECUTABLE
+### Adding recipes to the vc3-builder executable 
 --------------------------------------------
 
 First, clone the `vc3-builder` repository:
@@ -664,7 +664,7 @@ make clean vc3-builder
 
 
 
-### COMPILING THE BUILDER AS A STATIC BINARY
+### Compiling the Builder as a static binary
 ----------------------------------------
 
 ```
@@ -678,7 +678,7 @@ The steps above set a local [musl-libc](https://www.musl-libc.org) installation 
 
 
 
-### REFERENCE
+### Reference
 ---------
 
 Benjamin Tovar, Nicholas Hazekamp, Nathaniel Kremer-Herman, and Douglas Thain.
