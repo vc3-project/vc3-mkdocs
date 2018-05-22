@@ -93,7 +93,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
     
-      <a href="#glossary-of-terms-used-in-vc3-documentation" tabindex="1" class="md-skip">
+      <a href="#glossary-and-concepts-used-in-vc3-documentation" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -900,23 +900,23 @@
                   <a href="https://github.com/vc3-project/vc3-mkdocs/edit/master/docs/glossary.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="glossary-of-terms-used-in-vc3-documentation">Glossary of Terms Used in VC3 Documentation</h1>
+                <h1 id="glossary-and-concepts-used-in-vc3-documentation">Glossary and Concepts used in VC3 Documentation</h1>
 <h2 id="portal-users"><strong>Portal Users</strong></h2>
 <h3 id="allocation">Allocation</h3>
 <ul>
-<li>An Allocation refers to an User and a Resource Each Allocation must be owned by an User. Allocations are divisible/fractionable, and can be given to Projects. Allocations may not be oversubscribed. But unbounded Allocations may be parents of multiple unbounded SubAllocations. Bounded Allocations cannot spawn unbounded SubAllocations. If a Resource grants hard allocation and allows backfill mode, those are two distinct Allocations (one hard and one unbounded)</li>
+<li>An Allocation refers to both User and Resource concepts. Each Allocation must be owned by an User. Allocations are divisible/fractionable, and can be given to Projects. Allocations may not be oversubscribed. However, unbounded Allocations may be parents of multiple unbounded SubAllocations. Bounded Allocations cannot spawn unbounded SubAllocations. If a Resource grants hard allocation and allows backfill mode, those are two distinct Allocations (one hard and one unbounded)</li>
 </ul>
 <h3 id="authentication">Authentication</h3>
 <ul>
-<li>The current mechanism for users to sign-up and create accounts into the VC3 project is by authenticating themselves with their GlobusID account.</li>
+<li>The current mechanism for users to sign-up and create accounts on the VC3 platform is by authenticating themselves with their <a href="https://www.globusid.org/what">GlobusID</a>.</li>
 </ul>
 <h3 id="mfa">MFA</h3>
 <ul>
-<li>multi-factor authentication</li>
+<li>Multi-factor authentication, c.f. <a href="https://en.wikipedia.org/wiki/Multi-factor_authentication">Wikipedia</a>.</li>
 </ul>
 <h3 id="project">Project</h3>
 <ul>
-<li>a collection of “Allocations”. It has at least 1 “user owner”, and 0 or more non-owner members. The owner is also a member.</li>
+<li>A collection of “Allocations” from individual users. It has at least 1 “user owner”, and 0 or more non-owner members. The owner is also a member.</li>
 </ul>
 <h3 id="request">Request</h3>
 <ul>
