@@ -24,6 +24,7 @@ pages:
   - Developer Guide:
     - 'VC3 Builder': 'devguide/builder.md'
     - 'VC3 Infrastructure': 'devguide/deployment-guide.md'
+    - 'VC3 Website': 'devguide/deployment-web.md'
   - Glossary: glossary.md
   # - MK Docs Cheatsheet: mkcommands.md
 markdown_extensions:
