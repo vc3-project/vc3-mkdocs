@@ -4,5 +4,6 @@ The [VC3 project](http://www.virtualclusters.org) is searching for HPC resources
 
 ## Requirements
 
-* Comptute nodes must have outbound IP connectivity.
-* The login node of the resource must be reachable via ssh and not require MFA. 
+* Cluster must have one of the following batch systems: Slurm, HTCondor, PBS, or Grid Engine.
+* Compute nodes must have outbound IP connectivity.
+* The login node of the resource must be directly reachable via ssh (i.e., has a public IP) and not require MFA.
