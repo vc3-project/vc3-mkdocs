@@ -5,7 +5,7 @@
 ### SYNOPSIS
 --------
 
-**vc3-builder** [options] --require package[:min_version[:max_version]] --require ... [-- command-and-args]
+`**vc3-builder** [options] --require package[:min_version[:max_version]] --require ... [-- command-and-args]`
 
 ### DESCRIPTION
 -----------
