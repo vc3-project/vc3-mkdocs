@@ -43,6 +43,12 @@
      <changefreq>daily</changefreq>
     </url>
         
+    <url>
+     <loc>https://vc3-project.github.io/vc3-mkdocs//devguide/deployment-web/</loc>
+     <lastmod>2018-05-22</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
     
 
     
