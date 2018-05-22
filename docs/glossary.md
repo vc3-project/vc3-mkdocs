@@ -1,19 +1,19 @@
-# Glossary of Terms Used in VC3 Documentation
+# Glossary and Concepts used in VC3 Documentation
 
 
 ## **Portal Users**
 
 ### Allocation
-* An Allocation refers to an User and a Resource Each Allocation must be owned by an User. Allocations are divisible/fractionable, and can be given to Projects. Allocations may not be oversubscribed. But unbounded Allocations may be parents of multiple unbounded SubAllocations. Bounded Allocations cannot spawn unbounded SubAllocations. If a Resource grants hard allocation and allows backfill mode, those are two distinct Allocations (one hard and one unbounded)
+* An Allocation refers to both User and Resource concepts. Each Allocation must be owned by an User. Allocations are divisible/fractionable, and can be given to Projects. Allocations may not be oversubscribed. However, unbounded Allocations may be parents of multiple unbounded SubAllocations. Bounded Allocations cannot spawn unbounded SubAllocations. If a Resource grants hard allocation and allows backfill mode, those are two distinct Allocations (one hard and one unbounded)
 
 ### Authentication
-* The current mechanism for users to sign-up and create accounts into the VC3 project is by authenticating themselves with their GlobusID account.
+* The current mechanism for users to sign-up and create accounts on the VC3 platform is by authenticating themselves with their [GlobusID](https://www.globusid.org/what).
 
 ### MFA
-* multi-factor authentication
+* Multi-factor authentication, c.f. [Wikipedia](https://en.wikipedia.org/wiki/Multi-factor_authentication).
 
 ### Project
-* a collection of “Allocations”. It has at least 1 “user owner”, and 0 or more non-owner members. The owner is also a member.
+* A collection of “Allocations” from individual users. It has at least 1 “user owner”, and 0 or more non-owner members. The owner is also a member.
 
 ### Request
 * Entity that encapsulates all information that defines a particular virtual cluster. Creating a new Request triggers creation of the cluster.
