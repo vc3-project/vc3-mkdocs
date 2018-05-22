@@ -1,11 +1,11 @@
 ## VC3 Builder
 
-**vc3-builder** - Deploy software environments in clusters without administrator priviliges
+**vc3-builder** - Deploy software environments in clusters without system administrator privileges.
 
 ### SYNOPSIS
 --------
 
-`**vc3-builder** [options] --require package[:min_version[:max_version]] --require ... [-- command-and-args]`
+**vc3-builder** `[options] --require package[:min_version[:max_version]] --require ... [-- command-and-args]`
 
 ### DESCRIPTION
 -----------
