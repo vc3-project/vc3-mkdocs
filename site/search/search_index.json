@@ -96,6 +96,51 @@
             "title": "10. Launching a Virtual Cluster"
         },
         {
+            "location": "/userguide/osg-connect/",
+            "text": "Overview\n\n\nStep 1: Generating SSH Keys\n\n\nUnix-based operating system (Linux/Mac)\n\n\nWindows\n\n\nPutty\n\n\nGit Bash\n\n\n\n\n\n\n\n\n\n\nStep 2: Add the public SSH key to login node\n\n\nGetting Help\n\n\n\n\n\n\nOverview\n\n\nOSG Connect will require SSH-key-based logins due to the changes in the backend authorization service. If you have not added an SSH key before, upload your public SSH key to your OSG Connect user profile (choose \"Update Profile\" after signing into the http://osgconnect.net/ website).\n\n\nNOTE: Please do not edit the authorized keys file on the submit host (login.osgconnect.net).\n\n\nYou need to follow a two-step process to set up the SSH key to your account.\n\n\n\n\n\n\nGenerate SSH key pair.  \n\n\n\n\n\n\nAdd your public key to the submit host.\n\n\n\n\n\n\nAfter completing the process, you can log in from local machine (your laptop or desktop) to the OSG Connect submit host using ssh:\n\n\n ssh <your_osg_connect_username>@login.osgconnect.net\n\n\n\nor using your Windows SSH client\n\n\nStep 1: Generating SSH Keys\n\n\nWe will discuss how to generate a SSH key pair on both Unix-based and Windows.\n\n\nPlease note: The key pair consist of a private key and a public key. Keep the private key on machines that you have direct access to, i.e. your local machine (your laptop or desktop).\n\n\nUnix-based operating system (Linux/Mac)\n\n\nOn your local machine:\n\n\n mkdir ~/.ssh\n chmod 700 ~/.ssh\n ssh-keygen -t rsa\n\n\n\nThe last command will produce a prompt similar to\n\n\n Generating public/private rsa key pair.\n Enter file in which to save the key (/home/<local_user_name>/.ssh/id_rsa):\n\n\n\nUnless you want to change the location of the key, continue by pressing enter.\nNow you will be asked for a passphrase. Enter a passphrase that you will be\nable to remember and which is secure:\n\n\n Enter passphrase (empty for no passphrase):\n Enter same passphrase again:\n\n\n\nWhen everything has successfully completed, the output should resemble the\nfollowing:\n\n\n Your identification has been saved in /home/<local_user_name>/.ssh/id_rsa.\n Your public key has been saved in /home/<local_user_name>/.ssh/id_rsa.pub.\n The key fingerprint is:\n ae:89:72:0b:85:da:5a:f4:7c:1f:c2:43:fd:c6:44:38 myname@mymac.local\n The key's randomart image is:\n +--[ RSA 2048]----+\n |                 |\n |         .       |\n |        E .      |\n |   .   . o       |\n |  o . . S .      |\n | + + o . +       |\n |. + o = o +      |\n | o...o * o       |\n |.  oo.o .        |\n +-----------------+\n\n\n\nWindows\n\n\nPutty\n\n\n\n\n\n\nOpen the \nPuTTYgen\n program.\n\n\n\n\n\n\nFor Type of key to generate, select SSH-2 RSA.\n\n\n\n\n\n\nClick the Generate button.\n\n\n\n\n\n\nMove your mouse in the area below the progress bar. When the progress bar is full, PuTTYgen generates your key pair.\n\n\n\n\n\n\nType a passphrase in the Key passphrase field. Type the same passphrase in the Confirm passphrase field. You can use a key without a passphrase, but this is not recommended.\n\n\n\n\n\n\nClick the Save private key button to save the private key. Warning! You must save the private key. You will need it to connect to your machine.\n\n\n\n\n\n\nRight-click in the text field labeled Public key for pasting into OpenSSH authorized_keys file and choose Select All.\n\n\n\n\n\n\nRight-click again in the same text field and choose Copy.\n\n\n\n\n\n\n\n\nGit Bash\n\n\nFollow the instructions here to generate keys:\n\n\nhttps://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/#platform-windows\n\n\nStep 2: Add the public SSH key to login node\n\n\nTo add your public key:\n\n\n\n\n\n\nGo to www.osgconnect.net and sign in\n\n\n\n\n\n\nGo to \"Update Profile\"\n\n\n\n\n\n\nClick on \"Manage SSH and X.509 keys\".\n\n\n\n\n\n\nClick on \"Add a New Key\"\n\n\n\n\n\n\nGive the key a name, select \"SSH Public Key\", and copy/paste the public key into the text box\n\n\n\n\n\n\nClick \"Add Key\"\n\n\n\n\n\n\nThe key is now added to your profile in Globus Online. This will automatically\nbe added to the login nodes within a couple hours.\n\n\nGetting Help\n\n\nFor assistance or questions, please email the OSG User Support team  at \nuser-support@opensciencegrid.org\n or visit the \nhelp desk and community forums\n.",
+            "title": "OSG-Connect"
+        },
+        {
+            "location": "/userguide/osg-connect/#overview",
+            "text": "OSG Connect will require SSH-key-based logins due to the changes in the backend authorization service. If you have not added an SSH key before, upload your public SSH key to your OSG Connect user profile (choose \"Update Profile\" after signing into the http://osgconnect.net/ website).  NOTE: Please do not edit the authorized keys file on the submit host (login.osgconnect.net).  You need to follow a two-step process to set up the SSH key to your account.    Generate SSH key pair.      Add your public key to the submit host.    After completing the process, you can log in from local machine (your laptop or desktop) to the OSG Connect submit host using ssh:   ssh <your_osg_connect_username>@login.osgconnect.net  or using your Windows SSH client",
+            "title": "Overview"
+        },
+        {
+            "location": "/userguide/osg-connect/#step-1-generating-ssh-keys",
+            "text": "We will discuss how to generate a SSH key pair on both Unix-based and Windows.  Please note: The key pair consist of a private key and a public key. Keep the private key on machines that you have direct access to, i.e. your local machine (your laptop or desktop).",
+            "title": "Step 1: Generating SSH Keys"
+        },
+        {
+            "location": "/userguide/osg-connect/#unix-based-operating-system-linuxmac",
+            "text": "On your local machine:   mkdir ~/.ssh\n chmod 700 ~/.ssh\n ssh-keygen -t rsa  The last command will produce a prompt similar to   Generating public/private rsa key pair.\n Enter file in which to save the key (/home/<local_user_name>/.ssh/id_rsa):  Unless you want to change the location of the key, continue by pressing enter.\nNow you will be asked for a passphrase. Enter a passphrase that you will be\nable to remember and which is secure:   Enter passphrase (empty for no passphrase):\n Enter same passphrase again:  When everything has successfully completed, the output should resemble the\nfollowing:   Your identification has been saved in /home/<local_user_name>/.ssh/id_rsa.\n Your public key has been saved in /home/<local_user_name>/.ssh/id_rsa.pub.\n The key fingerprint is:\n ae:89:72:0b:85:da:5a:f4:7c:1f:c2:43:fd:c6:44:38 myname@mymac.local\n The key's randomart image is:\n +--[ RSA 2048]----+\n |                 |\n |         .       |\n |        E .      |\n |   .   . o       |\n |  o . . S .      |\n | + + o . +       |\n |. + o = o +      |\n | o...o * o       |\n |.  oo.o .        |\n +-----------------+",
+            "title": "Unix-based operating system (Linux/Mac)"
+        },
+        {
+            "location": "/userguide/osg-connect/#windows",
+            "text": "",
+            "title": "Windows"
+        },
+        {
+            "location": "/userguide/osg-connect/#putty",
+            "text": "Open the  PuTTYgen  program.    For Type of key to generate, select SSH-2 RSA.    Click the Generate button.    Move your mouse in the area below the progress bar. When the progress bar is full, PuTTYgen generates your key pair.    Type a passphrase in the Key passphrase field. Type the same passphrase in the Confirm passphrase field. You can use a key without a passphrase, but this is not recommended.    Click the Save private key button to save the private key. Warning! You must save the private key. You will need it to connect to your machine.    Right-click in the text field labeled Public key for pasting into OpenSSH authorized_keys file and choose Select All.    Right-click again in the same text field and choose Copy.",
+            "title": "Putty"
+        },
+        {
+            "location": "/userguide/osg-connect/#git-bash",
+            "text": "Follow the instructions here to generate keys:  https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/#platform-windows",
+            "title": "Git Bash"
+        },
+        {
+            "location": "/userguide/osg-connect/#step-2-add-the-public-ssh-key-to-login-node",
+            "text": "To add your public key:    Go to www.osgconnect.net and sign in    Go to \"Update Profile\"    Click on \"Manage SSH and X.509 keys\".    Click on \"Add a New Key\"    Give the key a name, select \"SSH Public Key\", and copy/paste the public key into the text box    Click \"Add Key\"    The key is now added to your profile in Globus Online. This will automatically\nbe added to the login nodes within a couple hours.",
+            "title": "Step 2: Add the public SSH key to login node"
+        },
+        {
+            "location": "/userguide/osg-connect/#getting-help",
+            "text": "For assistance or questions, please email the OSG User Support team  at  user-support@opensciencegrid.org  or visit the  help desk and community forums .",
+            "title": "Getting Help"
+        },
+        {
             "location": "/resourceguide/newresource/",
             "text": "Adding a resource to VC3\n\n\nThe \nVC3 project\n is searching for HPC resources to evaluate its closed-beta release.  If you would like to add an HPC resource to the VC3 platform for testing, please complete this \nform\n. You do not necessarily need to have an institutional affiliation with the HPC resource organization, but should have an allocation to run jobs there.  The VC3 user closed beta invitation signup is \nhere\n.\n\n\nRequirements\n\n\n\n\nCluster must have one of the following batch systems: Slurm, HTCondor, PBS, or Grid Engine.\n\n\nCompute nodes must have outbound IP connectivity.\n\n\nThe login node of the resource must be directly reachable via ssh (i.e., has a public IP) and not require MFA.",
             "title": "Adding Your Resources"
@@ -109,51 +154,6 @@
             "location": "/resourceguide/newresource/#requirements",
             "text": "Cluster must have one of the following batch systems: Slurm, HTCondor, PBS, or Grid Engine.  Compute nodes must have outbound IP connectivity.  The login node of the resource must be directly reachable via ssh (i.e., has a public IP) and not require MFA.",
             "title": "Requirements"
-        },
-        {
-            "location": "/resourceguide/osg-connect/",
-            "text": "Overview\n\n\nStep 1: Generating SSH Keys\n\n\nUnix-based operating system (Linux/Mac)\n\n\nWindows\n\n\nPutty\n\n\nGit Bash\n\n\n\n\n\n\n\n\n\n\nStep 2: Add the public SSH key to login node\n\n\nGetting Help\n\n\n\n\n\n\nOverview\n\n\nOSG Connect will require SSH-key-based logins due to the changes in the backend authorization service. If you have not added an SSH key before, upload your public SSH key to your OSG Connect user profile (choose \"Update Profile\" after signing into the http://osgconnect.net/ website).\n\n\nNOTE: Please do not edit the authorized keys file on the submit host (login.osgconnect.net).\n\n\nYou need to follow a two-step process to set up the SSH key to your account.\n\n\n\n\n\n\nGenerate SSH key pair.  \n\n\n\n\n\n\nAdd your public key to the submit host.\n\n\n\n\n\n\nAfter completing the process, you can log in from local machine (your laptop or desktop) to the OSG Connect submit host using ssh:\n\n\n ssh <your_osg_connect_username>@login.osgconnect.net\n\n\n\nor using your Windows SSH client\n\n\nStep 1: Generating SSH Keys\n\n\nWe will discuss how to generate a SSH key pair on both Unix-based and Windows.\n\n\nPlease note: The key pair consist of a private key and a public key. Keep the private key on machines that you have direct access to, i.e. your local machine (your laptop or desktop).\n\n\nUnix-based operating system (Linux/Mac)\n\n\nOn your local machine:\n\n\n mkdir ~/.ssh\n chmod 700 ~/.ssh\n ssh-keygen -t rsa\n\n\n\nThe last command will produce a prompt similar to\n\n\n Generating public/private rsa key pair.\n Enter file in which to save the key (/home/<local_user_name>/.ssh/id_rsa):\n\n\n\nUnless you want to change the location of the key, continue by pressing enter.\nNow you will be asked for a passphrase. Enter a passphrase that you will be\nable to remember and which is secure:\n\n\n Enter passphrase (empty for no passphrase):\n Enter same passphrase again:\n\n\n\nWhen everything has successfully completed, the output should resemble the\nfollowing:\n\n\n Your identification has been saved in /home/<local_user_name>/.ssh/id_rsa.\n Your public key has been saved in /home/<local_user_name>/.ssh/id_rsa.pub.\n The key fingerprint is:\n ae:89:72:0b:85:da:5a:f4:7c:1f:c2:43:fd:c6:44:38 myname@mymac.local\n The key's randomart image is:\n +--[ RSA 2048]----+\n |                 |\n |         .       |\n |        E .      |\n |   .   . o       |\n |  o . . S .      |\n | + + o . +       |\n |. + o = o +      |\n | o...o * o       |\n |.  oo.o .        |\n +-----------------+\n\n\n\nWindows\n\n\nPutty\n\n\n\n\n\n\nOpen the \nPuTTYgen\n program.\n\n\n\n\n\n\nFor Type of key to generate, select SSH-2 RSA.\n\n\n\n\n\n\nClick the Generate button.\n\n\n\n\n\n\nMove your mouse in the area below the progress bar. When the progress bar is full, PuTTYgen generates your key pair.\n\n\n\n\n\n\nType a passphrase in the Key passphrase field. Type the same passphrase in the Confirm passphrase field. You can use a key without a passphrase, but this is not recommended.\n\n\n\n\n\n\nClick the Save private key button to save the private key. Warning! You must save the private key. You will need it to connect to your machine.\n\n\n\n\n\n\nRight-click in the text field labeled Public key for pasting into OpenSSH authorized_keys file and choose Select All.\n\n\n\n\n\n\nRight-click again in the same text field and choose Copy.\n\n\n\n\n\n\n\n\nGit Bash\n\n\nFollow the instructions here to generate keys:\n\n\nhttps://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/#platform-windows\n\n\nStep 2: Add the public SSH key to login node\n\n\nTo add your public key:\n\n\n\n\n\n\nGo to www.osgconnect.net and sign in\n\n\n\n\n\n\nGo to \"Update Profile\"\n\n\n\n\n\n\nClick on \"Manage SSH and X.509 keys\".\n\n\n\n\n\n\nClick on \"Add a New Key\"\n\n\n\n\n\n\nGive the key a name, select \"SSH Public Key\", and copy/paste the public key into the text box\n\n\n\n\n\n\nClick \"Add Key\"\n\n\n\n\n\n\nThe key is now added to your profile in Globus Online. This will automatically\nbe added to the login nodes within a couple hours.\n\n\nGetting Help\n\n\nFor assistance or questions, please email the OSG User Support team  at \nuser-support@opensciencegrid.org\n or visit the \nhelp desk and community forums\n.",
-            "title": "OSG-Conect"
-        },
-        {
-            "location": "/resourceguide/osg-connect/#overview",
-            "text": "OSG Connect will require SSH-key-based logins due to the changes in the backend authorization service. If you have not added an SSH key before, upload your public SSH key to your OSG Connect user profile (choose \"Update Profile\" after signing into the http://osgconnect.net/ website).  NOTE: Please do not edit the authorized keys file on the submit host (login.osgconnect.net).  You need to follow a two-step process to set up the SSH key to your account.    Generate SSH key pair.      Add your public key to the submit host.    After completing the process, you can log in from local machine (your laptop or desktop) to the OSG Connect submit host using ssh:   ssh <your_osg_connect_username>@login.osgconnect.net  or using your Windows SSH client",
-            "title": "Overview"
-        },
-        {
-            "location": "/resourceguide/osg-connect/#step-1-generating-ssh-keys",
-            "text": "We will discuss how to generate a SSH key pair on both Unix-based and Windows.  Please note: The key pair consist of a private key and a public key. Keep the private key on machines that you have direct access to, i.e. your local machine (your laptop or desktop).",
-            "title": "Step 1: Generating SSH Keys"
-        },
-        {
-            "location": "/resourceguide/osg-connect/#unix-based-operating-system-linuxmac",
-            "text": "On your local machine:   mkdir ~/.ssh\n chmod 700 ~/.ssh\n ssh-keygen -t rsa  The last command will produce a prompt similar to   Generating public/private rsa key pair.\n Enter file in which to save the key (/home/<local_user_name>/.ssh/id_rsa):  Unless you want to change the location of the key, continue by pressing enter.\nNow you will be asked for a passphrase. Enter a passphrase that you will be\nable to remember and which is secure:   Enter passphrase (empty for no passphrase):\n Enter same passphrase again:  When everything has successfully completed, the output should resemble the\nfollowing:   Your identification has been saved in /home/<local_user_name>/.ssh/id_rsa.\n Your public key has been saved in /home/<local_user_name>/.ssh/id_rsa.pub.\n The key fingerprint is:\n ae:89:72:0b:85:da:5a:f4:7c:1f:c2:43:fd:c6:44:38 myname@mymac.local\n The key's randomart image is:\n +--[ RSA 2048]----+\n |                 |\n |         .       |\n |        E .      |\n |   .   . o       |\n |  o . . S .      |\n | + + o . +       |\n |. + o = o +      |\n | o...o * o       |\n |.  oo.o .        |\n +-----------------+",
-            "title": "Unix-based operating system (Linux/Mac)"
-        },
-        {
-            "location": "/resourceguide/osg-connect/#windows",
-            "text": "",
-            "title": "Windows"
-        },
-        {
-            "location": "/resourceguide/osg-connect/#putty",
-            "text": "Open the  PuTTYgen  program.    For Type of key to generate, select SSH-2 RSA.    Click the Generate button.    Move your mouse in the area below the progress bar. When the progress bar is full, PuTTYgen generates your key pair.    Type a passphrase in the Key passphrase field. Type the same passphrase in the Confirm passphrase field. You can use a key without a passphrase, but this is not recommended.    Click the Save private key button to save the private key. Warning! You must save the private key. You will need it to connect to your machine.    Right-click in the text field labeled Public key for pasting into OpenSSH authorized_keys file and choose Select All.    Right-click again in the same text field and choose Copy.",
-            "title": "Putty"
-        },
-        {
-            "location": "/resourceguide/osg-connect/#git-bash",
-            "text": "Follow the instructions here to generate keys:  https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/#platform-windows",
-            "title": "Git Bash"
-        },
-        {
-            "location": "/resourceguide/osg-connect/#step-2-add-the-public-ssh-key-to-login-node",
-            "text": "To add your public key:    Go to www.osgconnect.net and sign in    Go to \"Update Profile\"    Click on \"Manage SSH and X.509 keys\".    Click on \"Add a New Key\"    Give the key a name, select \"SSH Public Key\", and copy/paste the public key into the text box    Click \"Add Key\"    The key is now added to your profile in Globus Online. This will automatically\nbe added to the login nodes within a couple hours.",
-            "title": "Step 2: Add the public SSH key to login node"
-        },
-        {
-            "location": "/resourceguide/osg-connect/#getting-help",
-            "text": "For assistance or questions, please email the OSG User Support team  at  user-support@opensciencegrid.org  or visit the  help desk and community forums .",
-            "title": "Getting Help"
         },
         {
             "location": "/devguide/builder/",

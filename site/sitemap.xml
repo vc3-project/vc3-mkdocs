@@ -17,18 +17,18 @@
      <changefreq>daily</changefreq>
     </url>
         
+    <url>
+     <loc>https://vc3-project.github.io/vc3-mkdocs//userguide/osg-connect/</loc>
+     <lastmod>2018-05-22</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
     
 
     
         
     <url>
      <loc>https://vc3-project.github.io/vc3-mkdocs//resourceguide/newresource/</loc>
-     <lastmod>2018-05-22</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>https://vc3-project.github.io/vc3-mkdocs//resourceguide/osg-connect/</loc>
      <lastmod>2018-05-22</lastmod>
      <changefreq>daily</changefreq>
     </url>
