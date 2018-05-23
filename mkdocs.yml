@@ -21,6 +21,7 @@ pages:
     - 'Getting Started': 'userguide/gettingstarted.md'
   - Resource Provider Guide:
     - 'Adding Your Resources': 'resourceguide/newresource.md'
+    - 'OSG-Conect': 'resourceguide/osg-connect.md'
   - Developer Guide:
     - 'VC3 Builder': 'devguide/builder.md'
     - 'VC3 Infrastructure': 'devguide/deployment-guide.md'

@@ -1,0 +1,797 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="VC3 Documentation for Users and Developers">
+      
+      
+        <link rel="canonical" href="https://vc3-project.github.io/vc3-mkdocs/devguide/deployment-web/">
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-0.17.2, mkdocs-material-2.6.0">
+    
+    
+      
+        <title>VC3 Website - VC3</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.aa3de92b.css">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <a href="#vc3-web-portal" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://vc3-project.github.io/vc3-mkdocs/" title="VC3" class="md-header-nav__button md-logo">
+          
+            <img src="../../img/favicon.ico" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                VC3
+              </span>
+              <span class="md-header-nav__topic">
+                VC3 Website
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/vc3-project/vc3-mkdocs/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <span class="md-nav__button md-logo">
+      
+        <img src="../../img/favicon.ico" width="24" height="24">
+      
+    </span>
+    VC3
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/vc3-project/vc3-mkdocs/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      User Guide
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        User Guide
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../userguide/gettingstarted/" title="Getting Started" class="md-nav__link">
+      Getting Started
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Resource Provider Guide
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Resource Provider Guide
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../resourceguide/newresource/" title="Adding Your Resources" class="md-nav__link">
+      Adding Your Resources
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../resourceguide/osg-connect/" title="OSG-Conect" class="md-nav__link">
+      OSG-Conect
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+    
+    <label class="md-nav__link" for="nav-4">
+      Developer Guide
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Developer Guide
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../builder/" title="VC3 Builder" class="md-nav__link">
+      VC3 Builder
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../deployment-guide/" title="VC3 Infrastructure" class="md-nav__link">
+      VC3 Infrastructure
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        VC3 Website
+      </label>
+    
+    <a href="./" title="VC3 Website" class="md-nav__link md-nav__link--active">
+      VC3 Website
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#vc3-web-portal" title="VC3 Web Portal" class="md-nav__link">
+    VC3 Web Portal
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prerequisites" title="Prerequisites" class="md-nav__link">
+    Prerequisites
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-and-running-docker" title="Installing and running Docker" class="md-nav__link">
+    Installing and running Docker
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#issuing-a-certificate-with-lets-encrypt" title="Issuing a certificate with Let's Encrypt" class="md-nav__link">
+    Issuing a certificate with Let's Encrypt
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-the-web-portal" title="Installing the web portal" class="md-nav__link">
+    Installing the web portal
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-the-secrets" title="Installing the secrets" class="md-nav__link">
+    Installing the secrets
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-the-container" title="Running the container" class="md-nav__link">
+    Running the container
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../glossary/" title="Glossary" class="md-nav__link">
+      Glossary
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#vc3-web-portal" title="VC3 Web Portal" class="md-nav__link">
+    VC3 Web Portal
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prerequisites" title="Prerequisites" class="md-nav__link">
+    Prerequisites
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-and-running-docker" title="Installing and running Docker" class="md-nav__link">
+    Installing and running Docker
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#issuing-a-certificate-with-lets-encrypt" title="Issuing a certificate with Let's Encrypt" class="md-nav__link">
+    Issuing a certificate with Let's Encrypt
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-the-web-portal" title="Installing the web portal" class="md-nav__link">
+    Installing the web portal
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-the-secrets" title="Installing the secrets" class="md-nav__link">
+    Installing the secrets
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-the-container" title="Running the container" class="md-nav__link">
+    Running the container
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/vc3-project/vc3-mkdocs/edit/master/docs/devguide/deployment-web.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                  <h1>VC3 Website</h1>
+                
+                <h2 id="vc3-web-portal">VC3 Web Portal</h2>
+<p>The VC3 web portal is a flask application that integrates the VC3 client APIs to give end-users a GUI for instantiating, running and terminating virtual clusters, registering resources and allocations, managing projects, and more.</p>
+<h3 id="prerequisites">Prerequisites</h3>
+<p>For the host, you will need to install the development public keys and issue certs by the VC3 master. </p>
+<p>All of the web portal's non-secret dependencies are included in a Docker container. However, you will need the Docker engine running, as well as a certificate issued by LetsEncrypt or another CA if you want the website to actually be visible over HTTPS without warnings.</p>
+<h3 id="installing-and-running-docker">Installing and running Docker</h3>
+<p>You will first need to install EPEL and the Docker engine</p>
+<pre><code>yum install epel-release -y
+yum install docker -y
+</code></pre>
+
+<p>And start the service:</p>
+<pre><code>systemctl start docker 
+systemctl status docker
+</code></pre>
+
+<p>If it's working, you should see something like this:</p>
+<pre><code>● docker.service - Docker Application Container Engine
+   Loaded: loaded (/usr/lib/systemd/system/docker.service; disabled; vendor preset: disabled)
+   Active: active (running) since Mon 2017-09-11 19:23:18 UTC; 2s ago
+     Docs: http://docs.docker.com
+ Main PID: 16879 (dockerd-current)
+</code></pre>
+
+<h3 id="issuing-a-certificate-with-lets-encrypt">Issuing a certificate with Let's Encrypt</h3>
+<p>We use Certbot to issue SSL certificates that have been trusted by Let's Encrypt. First, install Cerbot:</p>
+<pre><code>yum install certbot -y
+</code></pre>
+
+<p>Next, run <code>certbot certonly</code> and go through the prompts:</p>
+<pre><code>[root@www-test ~]# certbot certonly
+Saving debug log to /var/log/letsencrypt/letsencrypt.log
+
+How would you like to authenticate with the ACME CA?
+-------------------------------------------------------------------------------
+1: Spin up a temporary webserver (standalone)
+2: Place files in webroot directory (webroot)
+-------------------------------------------------------------------------------
+Select the appropriate number [1-2] then [enter] (press 'c' to cancel): 1
+Enter email address (used for urgent renewal and security notices) (Enter 'c' to
+cancel):lincolnb@uchicago.edu
+Starting new HTTPS connection (1): acme-v01.api.letsencrypt.org
+
+-------------------------------------------------------------------------------
+Please read the Terms of Service at
+https://letsencrypt.org/documents/LE-SA-v1.1.1-August-1-2016.pdf. You must agree
+in order to register with the ACME server at
+https://acme-v01.api.letsencrypt.org/directory
+-------------------------------------------------------------------------------
+(A)gree/(C)ancel: A
+
+-------------------------------------------------------------------------------
+Would you be willing to share your email address with the Electronic Frontier
+Foundation, a founding partner of the Let's Encrypt project and the non-profit
+organization that develops Certbot? We'd like to send you email about EFF and
+our work to encrypt the web, protect its users and defend digital rights.
+-------------------------------------------------------------------------------
+(Y)es/(N)o: n
+Please enter in your domain name(s) (comma and/or space separated)  (Enter 'c'
+to cancel):www-test.virtualclusters.org
+Obtaining a new certificate
+Performing the following challenges:
+tls-sni-01 challenge for www-test.virtualclusters.org
+Waiting for verification...
+Cleaning up challenges
+
+IMPORTANT NOTES:
+ - Congratulations! Your certificate and chain have been saved at
+   /etc/letsencrypt/live/www-test.virtualclusters.org/fullchain.pem.
+   Your cert will expire on 2017-12-10. To obtain a new or tweaked
+   version of this certificate in the future, simply run certbot
+   again. To non-interactively renew *all* of your certificates, run
+   &quot;certbot renew&quot;
+ - Your account credentials have been saved in your Certbot
+   configuration directory at /etc/letsencrypt. You should make a
+   secure backup of this folder now. This configuration directory will
+   also contain certificates and private keys obtained by Certbot so
+   making regular backups of this folder is ideal.
+ - If you like Certbot, please consider supporting our work by:
+
+   Donating to ISRG / Let's Encrypt:   https://letsencrypt.org/donate
+   Donating to EFF:                    https://eff.org/donate-le
+</code></pre>
+
+<p>Take note of the fullchain location, e.g. <code>/etc/letsencrypt/live/www-test.virtualclusters.org/fullchain.pem</code>. You will need this location for the Container.</p>
+<h3 id="installing-the-web-portal">Installing the web portal</h3>
+<p>First, install git</p>
+<pre><code>yum install git -y
+</code></pre>
+
+<p>Then clone the web portal: </p>
+<pre><code>cd ~
+git clone https://github.com/vc3-project/vc3-website-python
+</code></pre>
+
+<h3 id="installing-the-secrets">Installing the secrets</h3>
+<p>You'll need 3 sets of secrets, at the following locations:
+ * <code>/root/secrets/$(hostname)/</code>
+ * <code>/root/secrets/portal.conf</code> 
+ * <code>/root/secrets/vc3/</code></p>
+<p>Docker can have unusual behavior with symbolic links, so it's best to just copy the WWW certs into place:</p>
+<pre><code>mkdir -p /root/secrets/$(hostname)
+cp -rL /etc/letsencrypt/live/$(hostname)/* /root/secrets/$(hostname)
+</code></pre>
+
+<p>The <code>portal.conf</code> should be obtained from the VC3 developers, or re-issued from Globus if necessary.</p>
+<p>For the VC3 certificates, you'll need to issue them with the Master as usual. The container expects the following filenames:
+ * <code>localhost.cert.pem</code>
+ * <code>localhost.keynopw.pem</code>
+ * <code>vc3chain.pem</code></p>
+<p>As before:</p>
+<pre><code>(master)# credible -c /etc/credible/credible.conf hostcert apf-test.virtualclusters.org
+(www)# vi /root/secrets/vc3/localhost.cert.pem
+(master)# credible -c /etc/credible/credible.conf hostkey apf-test.virtualclusters.org
+(www)# vi /root/secrets/vc3/localhost.keynopw.pem
+(master)# credible -c /etc/credible/credible.conf certchain
+(www)# vi /root/secrets/vc3/vc3chain.pem
+</code></pre>
+
+<h3 id="running-the-container">Running the container</h3>
+<p>Once you have issued your certificates, you'll need to deploy the container and mount the secrets into it at run-time. We intentionally separate secrets such that everything else can be dumped into Github.</p>
+<p>Use the following systemd file</p>
+<pre><code>[Unit]
+Description=VC3 Development Website
+After=syslog.target network.target
+
+[Service]
+Type=simple
+ExecStartPre=/usr/local/bin/update_dev_code.sh
+ExecStart=/usr/bin/docker run --rm --name vc3-portal -p 80:8080 -p 443:4443 -v /root/vc3-website/secrets/www-dev.virtualclusters.org:/etc/letsencrypt/live/virtualclusters.org -v /root/vc3-website/secrets/portal.conf:/srv/www/vc3-web-env/portal/portal.conf -v /root/vc3-website/secrets/vc3:/srv/www/vc3-web-env/etc/certs -v /root/vc3-website-python:/srv/www/vc3-web-env virtualclusters/vc3-portal:latest
+ExecReload=/usr/bin/docker restart vc3-portal
+ExecStop=/usr/bin/docker stop vc3-portal
+</code></pre>
+
+<p>Once placed in <code>/etc/systemd/system/website.service</code>, <code>systemctl start</code>, <code>systemctl stop</code>, and <code>systemctl restart</code> will do the appropriate things.</p>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../deployment-guide/" title="VC3 Infrastructure" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                VC3 Infrastructure
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../../glossary/" title="Glossary" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Glossary
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="http://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="https://github.com/vc3-project" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://twitter.com/virtualclusters" class="md-footer-social__link fa fa-twitter"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.9fb73e57.js"></script>
+      
+      <script>app.initialize({version:"0.17.2",url:{base:"../.."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>
