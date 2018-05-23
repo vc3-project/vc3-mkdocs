@@ -3,6 +3,7 @@
 For portal access visit [https://www.virtualclusters.org](https://www.virtualclusters.org).
 
 > May 23, 2018. The [VC3 project](http://www.virtualclusters.org) is searching for users and HPC resources to evaluate its closed-beta (or "limited") release.  During the limited beta release there might be system bugs, instability and lack of availability. 
+
 * The user invitation signup is [here](http://bit.ly/vc3-signup). 
 * If you would like to add an HPC resource to the VC3 platform for testing, please complete this [form](http://bit.ly/vc3-new-resource).  You do not necessarily need to have an institutional affiliation with the HPC resource organization, but should have an allocation to run jobs there.  
 
