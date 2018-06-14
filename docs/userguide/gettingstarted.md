@@ -10,7 +10,7 @@ In order to use VC3, you’ll need an allocation or account in a target resource
   - National Energy Research Scientific Computing Center (NERSC)
   - Pittsburgh Supercomputing Center (Bridges)
   - Open Science Grid
-  - and more!
+  - AWS
 
 Institutions and resources are added frequently. Check the [Resources](https://www.virtualclusters.org/resources) page for the full list of connected resources in the service.
 
